@@ -1,60 +1,69 @@
 use std::collections::HashMap;
 
 fn main() {
-    let mut world_state = World::new();
-    println!("{:?}", world_state);
+    let mut world = World::new();
 
-    world_state.regions.insert(0, Region::new("Austria"));
-    world_state.regions.insert(1, Region::new("France"));
-    world_state.regions.insert(2, Region::new("Vietnam"));
+    world.add_region(0, "Austria");
 
-    println!("{:?}", world_state.regions);
+    let regions = world.region_map.get_mut(&mut 0).unwrap();
 
-    let mut austria = world_state.regions.get(&0).unwrap(); 
+    regions.add_county(0, "Linz");
+    regions.add_county(1, "Vienna");
+    regions.add_county(2, "Salzburg");
 
-    austria.counties.insert(0, County::new("Vienna"));
-
-    println!("{:?}", austria);
-
-    
+    println!("{:?}", world);
 }
 
 #[derive(Debug)]
 struct World {
-    regions: HashMap<u8, Region>,
+    region_map: HashMap<u8, Region>,
 }
 
 impl World {
     fn new() -> World {
         World {
-            regions: HashMap::new(),
+            region_map: HashMap::new(),
         }
+    }
+
+    fn add_region(&mut self, region_id: u8, region_name: &str) {
+        self.region_map
+            .insert(region_id, Region::new(region_id, region_name));
     }
 }
 
 #[derive(Debug)]
 struct Region {
+    region_id: u8,
     name: String,
-    counties: HashMap<u8, County>,
+    county_map: HashMap<u8, County>,
 }
 
 impl Region {
-    fn new(input_name: &str) -> Region {
+    fn new(region_id: u8, region_name: &str) -> Region {
         Region {
-            name: input_name.to_string(),
-            counties: HashMap::new(),
+            region_id: region_id,
+            name: region_name.to_string(),
+            county_map: HashMap::new(),
         }
+    }
+
+    fn add_county(&mut self, county_id: u8, county_name: &str) {
+        self.county_map
+            .insert(county_id, County::new(county_id, county_name));
     }
 }
 
 #[derive(Debug)]
 struct County {
+    county_id: u8,
     name: String,
 }
 
 impl County {
-    fn new(input_name: &str) -> County {
+    fn new(county_id: u8, input_name: &str) -> County {
         County {
+            county_id: county_id,
             name: input_name.to_string(),
         }
     }
