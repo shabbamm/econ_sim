@@ -54,10 +54,10 @@ impl Region {
     }
 }
 
-##[derive(Debug)]
+#[derive(Debug)]
 struct Nation {
     nation_id: u8,
-    name: &str,
+    name: String,
     treasury: i128,
 }
 
@@ -65,7 +65,7 @@ impl Nation {
     fn new(nation_id: u8, name: &str, treasury: i128) -> Nation {
         Nation {
             nation_id: nation_id,
-            name: name,
+            name: name.to_string(),
             treasury: treasury,
         }
     }
