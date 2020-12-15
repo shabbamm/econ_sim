@@ -54,6 +54,23 @@ impl Region {
     }
 }
 
+##[derive(Debug)]
+struct Nation {
+    nation_id: u8,
+    name: &str,
+    treasury: i128,
+}
+
+impl Nation {
+    fn new(nation_id: u8, name: &str, treasury: i128) -> Nation {
+        Nation {
+            nation_id: nation_id,
+            name: name,
+            treasury: treasury,
+        }
+    }
+}
+
 #[derive(Debug)]
 struct County {
     county_id: u8,
