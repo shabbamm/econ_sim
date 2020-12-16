@@ -3,13 +3,11 @@ use std::collections::HashMap;
 fn main() {
     let mut world = World::new();
 
-    world.add_region(0, "Austria");
-
-    let regions = world.region_map.get_mut(&mut 0).unwrap();
-
-    regions.add_county(0, "Linz");
-    regions.add_county(1, "Vienna");
-    regions.add_county(2, "Salzburg");
+    //world.add_region(0, "Austria");
+    //let regions = world.region_map.get_mut(&mut 0).unwrap();
+    //regions.add_county(0, "Linz");
+    //regions.add_county(1, "Vienna");
+    //regions.add_county(2, "Salzburg");
 
     println!("{:?}", world);
 }

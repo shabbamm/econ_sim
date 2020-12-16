@@ -1,0 +1,22 @@
+world
+    region
+        counties
+            pops
+                class
+                nationality
+                job
+                culture
+                religion
+                wealth
+    nations
+        name
+        treasury
+        total pops
+        territory
+
+traits
+    land
+    sea
+    air
+    owner
+    resource
