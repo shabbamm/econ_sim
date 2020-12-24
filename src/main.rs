@@ -6,6 +6,7 @@ fn main() {
 #[derive(Debug)]
 struct World {
     continents: Vec<Continent>,
+    contintent_count: usize,
     nations: Vec<Nation>,
     nation_count: usize,
 }
@@ -13,43 +14,77 @@ struct World {
 impl World {
     fn new() -> World {
         World {
-            continents: vec![Continent::new(1)],
-            nations: vec![Nation::new()],
+            // TODO find a way to import the regioncount for each continent
+            continents: Vec::new(),
+            contintent_count: 0,
+            // TODO find way to populate nations vector based on starting nation values
+            nations: Vec::new(),
+            // TODO increment and decrement based on nation creation/destruction
             nation_count: 0,
         }
     }
+
+    fn create_continent() {}
+
+    fn create_nation(
+        name: String,
+        state_religion: String,
+        government_type: String,
+        ruling_party: String,
+        accepted_cultures: Vec<String>,
+        political_reforms: Vec<String>,
+        social_reforms: Vec<String>,
+        economic_reforms: Vec<String>,
+        owned_provinces: Vec<Province>,
+        core_provinces: Vec<Province>,
+    ) -> Nation {
+        Nation {
+            name: name,
+            state_religion: state_religion,
+            government_type: government_type,
+            ruling_party: ruling_party,
+            accepted_cultures: accepted_cultures,
+            political_reforms: political_reforms,
+            social_reforms: social_reforms,
+            economic_reforms: economic_reforms,
+            owned_provinces: owned_provinces,
+            core_provinces: core_provinces,
+        }
+    }
+
+    //String::from("Austria"),
+    //String::from("Catholocism"),
+    //String::from("Democracy"),
+    //String::from("Conservative"),
+    //vec![String::from("Austrian")],
+    //vec![], // TODO political reforms on creation
+    //vec![], // TODO social reforms on creation
+    //vec![], // TODO economic reforms on creation
+    //vec![], // TODO owned provinces on creation (should probobly be a reference)
+    //vec![], // TODO core provinces on creation (should also be a vector of references)
 }
 
 #[derive(Debug, Clone)]
 struct Nation {
+    name: String,
     state_religion: String,
-    government: String,
+    government_type: String,
     ruling_party: String,
     accepted_cultures: Vec<String>,
     political_reforms: Vec<String>,
     social_reforms: Vec<String>,
     economic_reforms: Vec<String>,
+    owned_provinces: Vec<Province>,
+    core_provinces: Vec<Province>,
 }
 
 impl Nation {
-    fn new() -> Nation {
-        Nation {
-            state_religion: String::new(),
-            government: String::new(),
-            ruling_party: String::new(),
-            accepted_cultures: Vec::new(),
-            political_reforms: Vec::new(),
-            social_reforms: Vec::new(),
-            economic_reforms: Vec::new(),
-        }
-    }
-
     fn update_state_religion(&mut self, input_string: &str) {
         self.state_religion = String::from(input_string);
     }
 
-    fn update_government(&mut self, input_string: &str) {
-        self.government = String::from(input_string);
+    fn update_government_type(&mut self, input_string: &str) {
+        self.government_type = String::from(input_string);
     }
 
     fn update_ruling_party(&mut self, input_string: &str) {
@@ -63,14 +98,16 @@ impl Nation {
 
 #[derive(Debug, Clone)]
 struct Continent {
+    name: String,
     regions: Vec<Region>,
     region_count: usize,
 }
 
 impl Continent {
-    fn new(region_count: usize) -> Continent {
+    fn new(name: String, region_count: usize) -> Continent {
         Continent {
-            regions: vec![Region::new(10); region_count],
+            name: name,
+            regions: vec![Region::new(1); region_count],
             region_count: region_count,
         }
     }
@@ -80,7 +117,7 @@ impl Continent {
 struct Region {
     id: usize,
     name: String,
-    provinces: Vec<Provinces>,
+    provinces: Vec<Province>,
     province_count: usize,
 }
 
@@ -89,7 +126,7 @@ impl Region {
         Region {
             id: 0,
             name: String::new(),
-            provinces: vec![Provinces::new(); 10],
+            provinces: vec![Province::new(); 1],
             province_count: province_count,
         }
     }
@@ -104,16 +141,16 @@ impl Region {
 }
 
 #[derive(Debug, Clone)]
-struct Provinces {
+struct Province {
     owner: String,
     population_groups: Vec<Pop>,
-    cores: Vec<Provinces>,
+    cores: Vec<Province>,
     goods: Vec<Goods>,
 }
 
-impl Provinces {
-    fn new() -> Provinces {
-        Provinces {
+impl Province {
+    fn new() -> Province {
+        Province {
             cores: Vec::new(),
             goods: Vec::new(),
             owner: String::new(),
