@@ -1,22 +1,26 @@
 fn main() {
-    let mut nation = Nation::new();
-    let mut continent = Continent::new();
-    let mut region = Region::new();
-    let mut provinces = Provinces::new();
-    let mut pop = Pop::new();
-    let mut goods = Goods::new();
-
-    println!("\n{:?}\n", nation);
-    nation.update_state_religion("Atheism");
-    nation.update_government("Democracy");
-    nation.update_ruling_party("Socialists");
-    nation.update_accepted_cultures("Austrian");
-    nation.update_accepted_cultures("German");
-    nation.update_accepted_cultures("Czech");
-    println!("\n{:?}\n", nation);
+    let mut world_state = World::new();
+    println!("{:?}", world_state);
 }
 
 #[derive(Debug)]
+struct World {
+    continents: Vec<Continent>,
+    nations: Vec<Nation>,
+    nation_count: usize,
+}
+
+impl World {
+    fn new() -> World {
+        World {
+            continents: vec![Continent::new(1)],
+            nations: vec![Nation::new()],
+            nation_count: 0,
+        }
+    }
+}
+
+#[derive(Debug, Clone)]
 struct Nation {
     state_religion: String,
     government: String,
@@ -57,36 +61,40 @@ impl Nation {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Continent {
     regions: Vec<Region>,
+    region_count: usize,
 }
 
 impl Continent {
-    fn new() -> Continent {
+    fn new(region_count: usize) -> Continent {
         Continent {
-            regions: Vec::new(),
+            regions: vec![Region::new(10); region_count],
+            region_count: region_count,
         }
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Region {
-    id: u8,
+    id: usize,
     name: String,
-    province_vector: Vec<Provinces>,
+    provinces: Vec<Provinces>,
+    province_count: usize,
 }
 
 impl Region {
-    fn new() -> Region {
+    fn new(province_count: usize) -> Region {
         Region {
             id: 0,
             name: String::new(),
-            province_vector: Vec::new(),
+            provinces: vec![Provinces::new(); 10],
+            province_count: province_count,
         }
     }
 
-    fn update_id(&mut self, input_integer: u8) {
+    fn update_id(&mut self, input_integer: usize) {
         self.id = input_integer;
     }
 
@@ -95,7 +103,7 @@ impl Region {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Provinces {
     owner: String,
     population_groups: Vec<Pop>,
@@ -106,10 +114,10 @@ struct Provinces {
 impl Provinces {
     fn new() -> Provinces {
         Provinces {
-            owner: String::new(),
-            population_groups: Vec::new(),
             cores: Vec::new(),
             goods: Vec::new(),
+            owner: String::new(),
+            population_groups: Vec::new(),
         }
     }
 
@@ -118,9 +126,9 @@ impl Provinces {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Pop {
-    size: u128,
+    size: usize,
     culture: String,
     religion: String,
     social_class: String,
@@ -142,7 +150,7 @@ impl Pop {
         }
     }
 
-    fn update_size(&mut self, input_integer: u128) {
+    fn update_size(&mut self, input_integer: usize) {
         self.size = input_integer;
     }
 
@@ -155,9 +163,9 @@ impl Pop {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Goods {
-    quantity: u128,
+    quantity: usize,
     name: String,
 }
 
@@ -169,7 +177,7 @@ impl Goods {
         }
     }
 
-    fn update_quantity(&mut self, input_integer: u128) {
+    fn update_quantity(&mut self, input_integer: usize) {
         self.quantity = input_integer;
     }
 
