@@ -6,9 +6,7 @@ fn main() {
 #[derive(Debug)]
 struct World {
     continents: Vec<Continent>,
-    contintent_count: usize,
     nations: Vec<Nation>,
-    nation_count: usize,
 }
 
 impl World {
@@ -16,15 +14,18 @@ impl World {
         World {
             // TODO find a way to import the regioncount for each continent
             continents: Vec::new(),
-            contintent_count: 0,
             // TODO find way to populate nations vector based on starting nation values
             nations: Vec::new(),
             // TODO increment and decrement based on nation creation/destruction
-            nation_count: 0,
         }
     }
 
-    fn create_continent() {}
+    fn create_continent(name: String) -> Continent {
+        Continent {
+            name: name,
+            regions: Vec::new(),
+        }
+    }
 
     fn create_nation(
         name: String,
@@ -94,21 +95,22 @@ impl Nation {
     fn update_accepted_cultures(&mut self, input_string: &str) {
         self.accepted_cultures.push(String::from(input_string));
     }
+
+    // adding,removeing, or updating reforms and provinces
 }
 
 #[derive(Debug, Clone)]
 struct Continent {
     name: String,
     regions: Vec<Region>,
-    region_count: usize,
 }
 
 impl Continent {
-    fn new(name: String, region_count: usize) -> Continent {
-        Continent {
+    fn create_region(id: usize, name: String) -> Region {
+        Region {
+            id: id,
             name: name,
-            regions: vec![Region::new(1); region_count],
-            region_count: region_count,
+            provinces: Vec::new(),
         }
     }
 }
@@ -118,19 +120,9 @@ struct Region {
     id: usize,
     name: String,
     provinces: Vec<Province>,
-    province_count: usize,
 }
 
 impl Region {
-    fn new(province_count: usize) -> Region {
-        Region {
-            id: 0,
-            name: String::new(),
-            provinces: vec![Province::new(); 1],
-            province_count: province_count,
-        }
-    }
-
     fn update_id(&mut self, input_integer: usize) {
         self.id = input_integer;
     }
@@ -138,29 +130,34 @@ impl Region {
     fn update_name(&mut self, input_string: &str) {
         self.name = String::from(input_string);
     }
+
+    fn creat_province() -> Province {
+        Province {
+            owner: String::from(""),
+            population_groups: Vec::new(),
+            cores: Vec::new(),
+            goods: Vec::new(),
+        }
+    }
 }
 
 #[derive(Debug, Clone)]
 struct Province {
     owner: String,
     population_groups: Vec<Pop>,
+    // TODO reference to existing provinces not creating a new one
     cores: Vec<Province>,
     goods: Vec<Goods>,
 }
 
 impl Province {
-    fn new() -> Province {
-        Province {
-            cores: Vec::new(),
-            goods: Vec::new(),
-            owner: String::new(),
-            population_groups: Vec::new(),
-        }
-    }
-
     fn update_owner(&mut self, input_string: &str) {
         self.owner = String::from(input_string);
     }
+
+    // add, remove, update pop groups
+
+    fn add_goods() -> Goods {}
 }
 
 #[derive(Debug, Clone)]
