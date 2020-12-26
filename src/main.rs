@@ -1,5 +1,24 @@
 fn main() {
     let mut world_state = World::new();
+
+    world_state.add_continent(String::from("Afrouerasia"));
+    world_state.add_continent(String::from("Antartica"));
+    world_state.add_continent(String::from("America"));
+    world_state.add_continent(String::from("Australia"));
+
+    world_state.add_nation(
+        String::from("Austria"),
+        String::from("Catholocism"),
+        String::from("Democracy"),
+        String::from("Conservative"),
+    );
+    //vec![String::from("Austrian")],
+    //vec![], // TODO political reforms on creation
+    //vec![], // TODO social reforms on creation
+    //vec![], // TODO economic reforms on creation
+    //vec![], // TODO owned provinces on creation (should probobly be a reference)
+    //vec![], // TODO core provinces on creation (should also be a vector of references)
+
     println!("{:?}", world_state);
 }
 
@@ -20,49 +39,24 @@ impl World {
         }
     }
 
-    fn create_continent(name: String) -> Continent {
-        Continent {
-            name: name,
-            regions: Vec::new(),
-        }
+    fn add_continent(&mut self, name: String) {
+        self.continents.push(Continent::new(name));
     }
 
-    fn create_nation(
+    fn add_nation(
+        &mut self,
         name: String,
         state_religion: String,
         government_type: String,
         ruling_party: String,
-        accepted_cultures: Vec<String>,
-        political_reforms: Vec<String>,
-        social_reforms: Vec<String>,
-        economic_reforms: Vec<String>,
-        owned_provinces: Vec<Province>,
-        core_provinces: Vec<Province>,
-    ) -> Nation {
-        Nation {
-            name: name,
-            state_religion: state_religion,
-            government_type: government_type,
-            ruling_party: ruling_party,
-            accepted_cultures: accepted_cultures,
-            political_reforms: political_reforms,
-            social_reforms: social_reforms,
-            economic_reforms: economic_reforms,
-            owned_provinces: owned_provinces,
-            core_provinces: core_provinces,
-        }
+    ) {
+        self.nations.push(Nation::new(
+            name,
+            state_religion,
+            government_type,
+            ruling_party,
+        ));
     }
-
-    //String::from("Austria"),
-    //String::from("Catholocism"),
-    //String::from("Democracy"),
-    //String::from("Conservative"),
-    //vec![String::from("Austrian")],
-    //vec![], // TODO political reforms on creation
-    //vec![], // TODO social reforms on creation
-    //vec![], // TODO economic reforms on creation
-    //vec![], // TODO owned provinces on creation (should probobly be a reference)
-    //vec![], // TODO core provinces on creation (should also be a vector of references)
 }
 
 #[derive(Debug, Clone)]
@@ -80,6 +74,26 @@ struct Nation {
 }
 
 impl Nation {
+    fn new(
+        name: String,
+        state_religion: String,
+        government_type: String,
+        ruling_party: String,
+    ) -> Nation {
+        Nation {
+            name: name,
+            state_religion: state_religion,
+            government_type: government_type,
+            ruling_party: ruling_party,
+            accepted_cultures: Vec::new(),
+            political_reforms: Vec::new(),
+            social_reforms: Vec::new(),
+            economic_reforms: Vec::new(),
+            owned_provinces: Vec::new(),
+            core_provinces: Vec::new(),
+        }
+    }
+
     fn update_state_religion(&mut self, input_string: &str) {
         self.state_religion = String::from(input_string);
     }
@@ -106,11 +120,10 @@ struct Continent {
 }
 
 impl Continent {
-    fn create_region(id: usize, name: String) -> Region {
-        Region {
-            id: id,
+    fn new(name: String) -> Continent {
+        Continent {
             name: name,
-            provinces: Vec::new(),
+            regions: Vec::new(),
         }
     }
 }
@@ -156,8 +169,6 @@ impl Province {
     }
 
     // add, remove, update pop groups
-
-    fn add_goods() -> Goods {}
 }
 
 #[derive(Debug, Clone)]
