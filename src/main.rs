@@ -1,23 +1,13 @@
 fn main() {
     let mut world_state = World::new();
-
-    world_state.add_continent(String::from("Afrouerasia"));
+    world_state.add_continent(String::from("Afroeurasia"));
     world_state.add_continent(String::from("Antartica"));
     world_state.add_continent(String::from("America"));
     world_state.add_continent(String::from("Australia"));
 
-    world_state.add_nation(
-        String::from("Austria"),
-        String::from("Catholocism"),
-        String::from("Democracy"),
-        String::from("Conservative"),
-    );
-    //vec![String::from("Austrian")],
-    //vec![], // TODO political reforms on creation
-    //vec![], // TODO social reforms on creation
-    //vec![], // TODO economic reforms on creation
-    //vec![], // TODO owned provinces on creation (should probobly be a reference)
-    //vec![], // TODO core provinces on creation (should also be a vector of references)
+    for nation in 0..193 {
+        world_state.add_nation(nation.to_string(), nation.to_string(), nation.to_string(), nation.to_string());
+    }
 
     println!("{:?}", world_state);
 }
@@ -43,20 +33,20 @@ impl World {
         self.continents.push(Continent::new(name));
     }
 
-    fn add_nation(
-        &mut self,
-        name: String,
-        state_religion: String,
-        government_type: String,
-        ruling_party: String,
-    ) {
-        self.nations.push(Nation::new(
-            name,
-            state_religion,
-            government_type,
-            ruling_party,
-        ));
+    fn add_nation(&mut self, name: String, state_religion: String, government_type: String, ruling_party: String) {
+        self.nations.push(Nation::new(name, state_religion, government_type, ruling_party));
     }
+
+    //String::from("Austria"),
+    //String::from("Catholocism"),
+    //String::from("Democracy"),
+    //String::from("Conservative"),
+    //vec![String::from("Austrian")],
+    //vec![], // TODO political reforms on creation
+    //vec![], // TODO social reforms on creation
+    //vec![], // TODO economic reforms on creation
+    //vec![], // TODO owned provinces on creation (should probobly be a reference)
+    //vec![], // TODO core provinces on creation (should also be a vector of references)
 }
 
 #[derive(Debug, Clone)]
@@ -69,17 +59,12 @@ struct Nation {
     political_reforms: Vec<String>,
     social_reforms: Vec<String>,
     economic_reforms: Vec<String>,
-    owned_provinces: Vec<Province>,
-    core_provinces: Vec<Province>,
+    owned_provinces: Vec<usize>,
+    core_provinces: Vec<usize>,
 }
 
 impl Nation {
-    fn new(
-        name: String,
-        state_religion: String,
-        government_type: String,
-        ruling_party: String,
-    ) -> Nation {
+    fn new(name: String, state_religion: String, government_type: String, ruling_party: String) -> Nation {
         Nation {
             name: name,
             state_religion: state_religion,
@@ -94,6 +79,10 @@ impl Nation {
         }
     }
 
+    fn update_name(&mut self, input_string: &str) {
+        self.name = String::from(input_string);
+    }
+
     fn update_state_religion(&mut self, input_string: &str) {
         self.state_religion = String::from(input_string);
     }
@@ -106,11 +95,25 @@ impl Nation {
         self.ruling_party = String::from(input_string);
     }
 
-    fn update_accepted_cultures(&mut self, input_string: &str) {
+    fn add_accepted_culture(&mut self, input_string: &str) {
         self.accepted_cultures.push(String::from(input_string));
     }
 
-    // adding,removeing, or updating reforms and provinces
+    fn add_political_reform(&mut self, input_string: &str) {
+        self.political_reforms.push(String::from(input_string));
+    }
+
+    fn add_social_reform(&mut self, input_string: &str) {
+        self.social_reforms.push(String::from(input_string));
+    }
+
+    fn add_economic_reform(&mut self, input_string: &str) {
+        self.economic_reforms.push(String::from(input_string));
+    }
+
+    fn add_owned_province(&mut self, province_id: usize) {
+        self.owned_provinces.push(province_id);
+    }
 }
 
 #[derive(Debug, Clone)]
@@ -136,6 +139,14 @@ struct Region {
 }
 
 impl Region {
+    fn new() -> Region {
+        Region {
+            id: 0,
+            name: String::new(),
+            provinces: Vec::new(),
+        }
+    }
+
     fn update_id(&mut self, input_integer: usize) {
         self.id = input_integer;
     }
@@ -143,32 +154,29 @@ impl Region {
     fn update_name(&mut self, input_string: &str) {
         self.name = String::from(input_string);
     }
-
-    fn creat_province() -> Province {
-        Province {
-            owner: String::from(""),
-            population_groups: Vec::new(),
-            cores: Vec::new(),
-            goods: Vec::new(),
-        }
-    }
 }
 
 #[derive(Debug, Clone)]
 struct Province {
     owner: String,
     population_groups: Vec<Pop>,
-    // TODO reference to existing provinces not creating a new one
     cores: Vec<Province>,
     goods: Vec<Goods>,
 }
 
 impl Province {
+    fn new(owner: String) -> Province {
+        Province {
+            owner: owner,
+            cores: Vec::new(),
+            goods: Vec::new(),
+            population_groups: Vec::new(),
+        }
+    }
+
     fn update_owner(&mut self, input_string: &str) {
         self.owner = String::from(input_string);
     }
-
-    // add, remove, update pop groups
 }
 
 #[derive(Debug, Clone)]
