@@ -5,11 +5,37 @@ fn main() {
     world_state.add_continent(String::from("America"));
     world_state.add_continent(String::from("Australia"));
 
-    for nation in 0..193 {
-        world_state.add_nation(nation.to_string(), nation.to_string(), nation.to_string(), nation.to_string());
+    for continent in 0..4 {
+        for region in 0..4 {
+            world_state.continents[continent].add_region(region + 1, (region + 1).to_string());
+            for province in 0..1 {
+                world_state.continents[continent].regions[region]
+                    .add_province(province.to_string());
+                for group in 0..1 {
+                    world_state.continents[continent].regions[region].provinces[province]
+                        .add_pop_group(
+                            100000000,
+                            group.to_string(),
+                            group.to_string(),
+                            group.to_string(),
+                            group.to_string(),
+                        );
+                }
+                for cores in 0..4 {}
+                for goods in 0..4 {}
+            }
+        }
     }
 
-    println!("{:?}", world_state);
+    for nation in 1..3 {
+        world_state.add_nation(
+            nation.to_string(),
+            nation.to_string(),
+            nation.to_string(),
+            nation.to_string(),
+        );
+    }
+    println!("\n{:#?}", world_state);
 }
 
 #[derive(Debug)]
@@ -33,8 +59,19 @@ impl World {
         self.continents.push(Continent::new(name));
     }
 
-    fn add_nation(&mut self, name: String, state_religion: String, government_type: String, ruling_party: String) {
-        self.nations.push(Nation::new(name, state_religion, government_type, ruling_party));
+    fn add_nation(
+        &mut self,
+        name: String,
+        state_religion: String,
+        government_type: String,
+        ruling_party: String,
+    ) {
+        self.nations.push(Nation::new(
+            name,
+            state_religion,
+            government_type,
+            ruling_party,
+        ));
     }
 
     //String::from("Austria"),
@@ -64,7 +101,12 @@ struct Nation {
 }
 
 impl Nation {
-    fn new(name: String, state_religion: String, government_type: String, ruling_party: String) -> Nation {
+    fn new(
+        name: String,
+        state_religion: String,
+        government_type: String,
+        ruling_party: String,
+    ) -> Nation {
         Nation {
             name: name,
             state_religion: state_religion,
@@ -129,6 +171,10 @@ impl Continent {
             regions: Vec::new(),
         }
     }
+
+    fn add_region(&mut self, id: usize, name: String) {
+        self.regions.push(Region::new(id, name));
+    }
 }
 
 #[derive(Debug, Clone)]
@@ -139,12 +185,16 @@ struct Region {
 }
 
 impl Region {
-    fn new() -> Region {
+    fn new(id: usize, name: String) -> Region {
         Region {
-            id: 0,
-            name: String::new(),
+            id: id,
+            name: name,
             provinces: Vec::new(),
         }
+    }
+
+    fn add_province(&mut self, owner: String) {
+        self.provinces.push(Province::new(owner));
     }
 
     fn update_id(&mut self, input_integer: usize) {
@@ -174,6 +224,18 @@ impl Province {
         }
     }
 
+    fn add_pop_group(
+        &mut self,
+        size: usize,
+        culture: String,
+        religion: String,
+        social_class: String,
+        basic_needs: String,
+    ) {
+        self.population_groups
+            .push(Pop::new(size, culture, religion, social_class, basic_needs));
+    }
+
     fn update_owner(&mut self, input_string: &str) {
         self.owner = String::from(input_string);
     }
@@ -191,12 +253,18 @@ struct Pop {
 }
 
 impl Pop {
-    fn new() -> Pop {
+    fn new(
+        size: usize,
+        culture: String,
+        religion: String,
+        social_class: String,
+        basic_needs: String,
+    ) -> Pop {
         Pop {
-            size: 0,
-            culture: String::new(),
-            religion: String::new(),
-            social_class: String::new(),
+            size: size,
+            culture: culture,
+            religion: religion,
+            social_class: social_class,
             basic_needs: Vec::new(),
             daily_needs: Vec::new(),
             luxury_needs: Vec::new(),
