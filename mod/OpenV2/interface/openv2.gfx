@@ -1,0 +1,113 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_openv2_left_right"
+		texturefile = "gfx\\interface\\toggle_default.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_openv2_msg_close"
+		texturefile = "gfx\\interface\\msg_close.tga"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_openv2_automate"
+		texturefile = "gfx\\interface\\event_automate.tga"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_info_icon"
+		texturefile = "gfx\\interface\\openv2_info_icon.tga"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_odds_icon"
+		texturefile = "gfx\\interface\\openv2_odds_icon.tga"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_location_cursor"
+		texturefile = "gfx\\interface\\openv2_location_cursor.tga"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_stars_horizontal"
+		texturefile = "gfx\\interface\\openv2_star_levels_h.tga"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_message_type"
+		texturefile = "gfx\\interface\\openv2_message_options.tga"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_message_settings_button"
+		texturefile = "gfx\\interface\\openv2_msg_button.tga"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_gradient"
+		texturefile = "gfx\\interface\\gradient.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_rg_gradient"
+		texturefile = "gfx\\interface\\rg_gradient.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_small_port"
+		texturefile = "gfx\\interface\\port_b.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_rail_gradient"
+		texturefile = "gfx\\interface\\rail_gradient.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_white_square"
+		texturefile = "gfx\\interface\\white_square.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_legend_item_bg"
+		texturefile = "gfx\\interface\\legend_item_bg.tga"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_unit_bar_center"
+		texturefile = "gfx\\interface\\unit_bar_center.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_unit_bar_selection"
+		texturefile = "gfx\\interface\\unit_bar_selection.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_unit_types"
+		texturefile = "gfx\\interface\\unit_types_b.tga"
+		noOfFrames = 3
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_unit_left_cap"
+		texturefile = "gfx\\interface\\left_cap.tga"
+		noOfFrames = 5
+	}
+	
+	spriteType = {
+		name = "GFX_openv2_unit_right_cap"
+		texturefile = "gfx\\interface\\right_cap.tga"
+		noOfFrames = 5
+	}
+	
+}

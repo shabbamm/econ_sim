@@ -1,0 +1,2176 @@
+guiTypes = {
+	guiButtonType = {
+		name = "open_v2_left_right_button"
+		position = { x = 0 y = 0 }
+		quadTextureSprite = "GFX_openv2_left_right"
+		clicksound = click
+	}
+	
+	guiButtonType = {
+		name = "open_v2_msg_close_button"
+		position = { x = 0 y = 0 }
+		quadTextureSprite = "GFX_openv2_msg_close"
+		shortcut = "ESCAPE"
+		clicksound = click
+	}
+	
+	listboxType = 	{
+		name ="open_v2_province_event_list"
+		position = { x = 0 y = 0 }
+		backGround=""
+		size = { x=320 y = 96 }
+		Orientation = "UPPER_LEFT"
+		spacing = 0
+		scrollbartype = "standardlistbox_slider"
+		borderSize = {x = 0 y = 0}
+	}
+	
+	listboxType = 	{
+		name ="open_v2_nation_event_list"
+		position = { x = 0 y = 0 }
+		backGround=""
+		size = { x=512 y = 96 }
+		Orientation = "UPPER_LEFT"
+		spacing = 0
+		scrollbartype = "standardlistbox_slider"
+		borderSize = {x = 0 y = 0}
+	}
+		
+	windowType = {
+		name = "open_v2_province_event_option"
+		position = { x=0 y=0 }	
+		size = { x=320 y=32 }
+		moveable = 0
+		fullScreen = no
+
+		guiButtonType = {
+			name = "option_button"
+			position = { x=0 y =0}
+			quadTextureSprite ="GFX_event_province_button"
+			buttonFont = "vic_18_black"
+		}
+		
+		guiButtonType = {
+			name = "auto_button"
+			position = { x=288 y=0 }
+			quadTextureSprite ="GFX_openv2_automate"
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_nation_event_option"
+		position = { x=0 y=0 }	
+		size = { x=512 y=32 }
+		moveable = 0
+		fullScreen = no
+
+		guiButtonType = {
+			name = "option_button"
+			position = { x=0 y =0}
+			quadTextureSprite ="GFX_event_country_button"
+			buttonFont = "vic_18_black"
+		}
+		
+		guiButtonType = {
+			name = "auto_button"
+			position = { x=480 y=0 }
+			quadTextureSprite ="GFX_openv2_automate"
+		}
+	}
+	
+	iconType = {
+		name ="open_v2_info_icon"
+		spriteType = "GFX_openv2_info_icon"
+		position = { x= 25 y = 25 }
+		Orientation = "UPPER_LEFT"
+	}
+	iconType = {
+		name ="open_v2_odds_icon"
+		spriteType = "GFX_openv2_odds_icon"
+		position = { x= 25 y = 55 }
+		Orientation = "UPPER_LEFT"
+	}
+	iconType = {
+		name ="open_v2_location_cursor"
+		spriteType = "GFX_openv2_location_cursor"
+		position = { x= 0 y = 0 }
+		Orientation = "UPPER_LEFT"
+	}
+	windowType = {
+		name = "open_v2_logtext"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=430 y= 16 }
+		moveable = 0
+		fullScreen = no
+		
+		instantTextBoxType = {
+			name = "open_v2_log_text_box"
+			position = { x = 0 y = 0 }
+			font = "timefont_12"
+			format = left
+			borderSize = {x = 0 y = 0}
+			
+			maxWidth = 430
+			maxHeight = 16	
+			Orientation = "UPPER_LEFT"			
+		}
+		
+	}
+	
+	guiButtonType = {
+		name = "open_v2_message_settings_button"
+		position = { x = -49 y = -95 }
+		quadTextureSprite = "GFX_openv2_message_settings_button"
+		Orientation = "LOWER_RIGHT"
+		clicksound = click
+	}
+	
+	windowType = {
+		name ="openv2_message_settings"
+		backGround=""
+		position = { x = -390 y = -232 }	
+		size = { x = 780 y = 464}
+		Orientation = "CENTER"
+			
+		iconType = {
+			name ="messagesettings_bg"
+			spriteType = "GFX_messagesettings_bg"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x = -32 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+		}
+
+		instantTextBoxType = {
+			position = {x = 16 y = 16 }
+			name = "messagesettings_label"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 749
+			maxHeight = 24
+			text = "MENU_BAR_MESSAGE_SETTINGS"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+			
+		checkboxType = {
+			name = "category_messages_button"
+			position = { x=30 y=47 }
+			quadTextureSprite ="GFX_message_cat_tab"
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			position = {x = 30 y = 54 }
+			name = "category_messages"
+			font = "vic_18_black"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 90
+			maxHeight = 18
+			text = "openv2_messagecat_text"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+			
+		checkboxType = {
+			name = "category_sources_button"
+			position = { x=120 y=47 }
+			quadTextureSprite ="GFX_message_cat_tab"
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			position = {x = 120 y = 54 }
+			name = "category_sources"
+			font = "vic_18_black"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 90
+			maxHeight = 18
+			text = "openv2_sourcescat_text"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		listboxType = {
+			name = "message_settings_items"
+			position = { x= 30 y = 109}
+				
+			backGround=""
+			size = { x=725 y= 301 }
+			spacing = 1
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 20 y = 5}
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			position = {x = 30 y = 85 }
+			name = "header_search"
+			font = "vic_18_black"
+			maxWidth = 70
+			maxHeight = 22
+			text = "MESSAGE_SEARCH"	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+			
+		editBoxType = {
+			position = { x = 100 y = 81 }
+			name = "search_edit"
+			textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+			font = "vic_18"
+			borderSize = { x = 8 y = 4  }	
+			size = { x=240 y=26 }
+			text = ""	
+			orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "stars_zero"
+			spriteType = "GFX_openv2_stars_horizontal"
+			position = { x= 499 y = 93 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "stars_one"
+			spriteType = "GFX_openv2_stars_horizontal"
+			position = { x= 563 y = 93 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "stars_two"
+			spriteType = "GFX_openv2_stars_horizontal"
+			position = { x= 627 y = 93 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "stars_three"
+			spriteType = "GFX_openv2_stars_horizontal"
+			position = { x= 691 y = 93 }
+			Orientation = "UPPER_LEFT"
+		}
+			
+		instantTextBoxType = {
+			name = "label_importance"
+			position = { x = 499 y = 91 }
+			maxWidth = 128
+			maxHeight = 18	
+			font = "vic_16_black"
+			borderSize = {x = 0 y = 0}	
+			format = centre
+			text = "Importance"	
+			Orientation = "UPPER_LEFT"	
+			fixedsize = yes		
+		}
+			
+				
+	}
+	
+	windowType = {
+		name = "openv2_message_setting_item"
+		position = { x=0 y=0 }	
+		size = { x=725 y=20 }
+		moveable = 0
+		fullScreen = no
+
+		iconType = {
+			name ="message_bg"
+			spriteType = "GFX_messagesettings_listbutton"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		guiButtonType = {
+			name = "country_flag"
+			position = { x=0 y = 1 }
+			quadTextureSprite ="GFX_flag_new"
+			buttonText = " "
+			buttonFont = "vic_18_black"
+		}
+		
+		instantTextBoxType = {
+			position = {x = 30 y = 4 }
+			name = "entry_text"
+			font = "Arial14_bold_black"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 505
+			maxHeight = 16
+			orientation = "UPPER_LEFT"
+			format = left
+			fixedsize = yes
+		}
+		
+		guiButtonType = {
+			name = "importance_button"
+			position = { x= 509 y = 2 }
+			quadTextureSprite = "GFX_openv2_stars_horizontal"
+			buttonFont = "vic_18_black"
+		}
+		
+		guiButtonType = {
+			name = "stars_zero_button"
+			position = { x= 485 y = 2 }
+			quadTextureSprite = "GFX_openv2_message_type"
+			buttonFont = "vic_18_black"
+		}
+		
+		guiButtonType = {
+			name = "stars_one_button"
+			position = { x= 549 y = 2 }
+			quadTextureSprite = "GFX_openv2_message_type"
+			buttonFont = "vic_18_black"
+		}
+		
+		guiButtonType = {
+			name = "stars_two_button"
+			position = { x= 613 y = 2 }
+			quadTextureSprite = "GFX_openv2_message_type"
+			buttonFont = "vic_18_black"
+		}
+		
+		guiButtonType = {
+			name = "stars_three_button"
+			position = { x= 677 y = 2 }
+			quadTextureSprite = "GFX_openv2_message_type"
+			buttonFont = "vic_18_black"
+		}
+	}
+	
+	windowType = {
+		name ="openv2_find_window"
+		position = { x= -350 y =-550 }	
+		size = { x=320 y =388 }
+		moveable = 1
+		Orientation = "LOWER_RIGHT"
+			
+		guiButtonType = {
+			name = "goto_box"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_bg_find_province"
+		}
+			
+		listboxType = {
+			name ="find_entries"
+			position = { x= 22 y = 81 }
+			backGround=""
+			size = { x=258 y =240}
+			spacing = 1
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 10 y = 10}
+			Orientation = "UPPER_LEFT"
+			}
+
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x = -32 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+		}
+
+		instantTextBoxType={
+			position = {x = 14 y = 19 }
+			name = "find_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 290
+			maxHeight = 19
+			text = "GOTO_SEARCH_COUNTRIES_AND_PROVINCES"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+			
+		editBoxType = {
+			position = { x = 22 y = 53 }
+			name = "find_edit"
+			textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+			font = "vic_18"
+			borderSize = { x = 4 y = 4  }	
+			size = { x=274 y=26 }
+			orientation = "UPPER_LEFT"
+		}
+			
+	}
+	
+	windowType = {
+		name = "openv2_find_entry"
+		position = { x=0 y=0 }	
+		size = { x=258 y=20 }
+		moveable = 0
+		fullScreen = no
+
+		iconType = {
+			name ="entry_bg"
+			spriteType = "GFX_messagesettings_listbutton"
+			position = { x= 0 y = 0 }
+			# size = { x= 244 y = 20 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		guiButtonType = {
+			name = "country_flag"
+			position = { x=0 y = 1 }
+			quadTextureSprite ="GFX_flag_new"
+			buttonText = " "
+			buttonFont = "vic_18_black"
+		}
+		
+		instantTextBoxType = {
+			position = {x = 30 y = 4 }
+			name = "entry_text"
+			font = "Arial14_bold_black"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 228
+			maxHeight = 16
+			orientation = "UPPER_LEFT"
+			format = left
+			fixedsize = yes
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_main_menu"
+		position = { x= -176 y = -216 }	
+		size = { x=352 y = 432 }
+		moveable = 1
+		Orientation = "CENTER"
+		
+		iconType = {
+			name = "background"
+			spriteType = "GFX_menu"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+			
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x = -32 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+		}
+		
+		guiButtonType = {
+			name = "save_and_exit"
+			position = { x = 58 y = 104 }
+			quadTextureSprite ="GFX_frontend_button_236"	
+			buttonText = "OPENV2_SAVE_AND_EXIT"
+			buttonFont = "vic_22_black"
+		}
+
+		guiButtonType = {
+			name = "save"
+			position = { x = 58 y = 157 }
+			quadTextureSprite ="GFX_frontend_button_236"	
+			buttonText = "OPENV2_SAVE"
+			buttonFont = "vic_22_black"
+		}
+		
+		guiButtonType = {
+			name = "exit"
+			position = { x = 58 y = 210 }
+			quadTextureSprite ="GFX_frontend_button_236"	
+			buttonText = "OPENV2_EXIT"
+			buttonFont = "vic_22_black"
+		}
+		
+		guiButtonType = {
+			name = "graphics"
+			position = { x = 58 y = 263 }
+			quadTextureSprite ="GFX_frontend_button_236"	
+			buttonText = "OPENV2_GRAPHICS_OPT"
+			buttonFont = "vic_22_black"
+		}
+		
+		guiButtonType = {
+			name = "sound"
+			position = { x = 58 y = 316 }
+			quadTextureSprite ="GFX_frontend_button_236"	
+			buttonText = "OPENV2_SOUND_OPT"
+			buttonFont = "vic_22_black"
+		}
+		
+		guiButtonType = {
+			name = "controls"
+			position = { x = 58 y = 369 }
+			quadTextureSprite ="GFX_frontend_button_236"	
+			buttonText = "OPENV2_CONTROLS_OPT"
+			buttonFont = "vic_22_black"
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_graphics_menu"
+		position = { x= -176 y = -216 }	
+		size = { x=352 y = 432 }
+		moveable = 1
+		Orientation = "CENTER"
+		
+		iconType = {
+			name = "background"
+			spriteType = "GFX_menu"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+			
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x = -32 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 104 }
+			name = "window_mode_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "WINDOW_MODE_LABEL"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 122 }
+			name = "window_mode_value"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "window_mode_left"
+			position = { x = 51 y = 115 }
+			quadTextureSprite = "option_prev"
+		}
+
+		guiButtonType = {
+			name = "window_mode_right"
+			position = { x = 269 y = 115 }
+			quadTextureSprite = "option_next"
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 157 }
+			name = "projection_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "PROJECTION_LABEL"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 175 }
+			name = "projection_value"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "projection_left"
+			position = { x = 51 y = 168 }
+			quadTextureSprite = "option_prev"
+		}
+
+		guiButtonType = {
+			name = "projection_right"
+			position = { x = 269 y = 168 }
+			quadTextureSprite = "option_next"
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 210 }
+			name = "ui_scale_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "UI_SCALE_LABEL"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 228 }
+			name = "ui_scale_value"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "ui_scale_left"
+			position = { x = 51 y = 221 }
+			quadTextureSprite = "option_prev"
+		}
+
+		guiButtonType = {
+			name = "ui_scale_right"
+			position = { x = 269 y = 221 }
+			quadTextureSprite = "option_next"
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_controls_menu"
+		position = { x= -176 y = -216 }	
+		size = { x=352 y = 432 }
+		moveable = 1
+		Orientation = "CENTER"
+		
+		iconType = {
+			name = "background"
+			spriteType = "GFX_menu"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+			
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x = -32 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 104 }
+			name = "zoom_mode_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "ZOOM_LABEL"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 122 }
+			name = "zoom_mode_value"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "zoom_mode_left"
+			position = { x = 51 y = 115 }
+			quadTextureSprite = "option_prev"
+		}
+
+		guiButtonType = {
+			name = "zoom_mode_right"
+			position = { x = 269 y = 115 }
+			quadTextureSprite = "option_next"
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_audio_menu"
+		position = { x= -176 y = -216 }	
+		size = { x=352 y = 432 }
+		moveable = 1
+		Orientation = "CENTER"
+		
+		iconType = {
+			name = "background"
+			spriteType = "GFX_menu"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+			
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x = -32 y = 0 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 104 }
+			name = "master_volume_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "SM_MASTER_VOLUME"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		scrollbarType = {
+			name = "master_volume_scroll_bar"	
+			slider = "slider"
+			track= "track"
+			leftbutton = "up"
+			rightbutton = "down"
+			size = {x = 236 y = 16 }
+			position = {x= 58 y = 123 }	
+			minValue = 0
+			maxValue = 128
+			stepSize = 1
+			startValue = 128
+			horizontal = 1
+			
+			guiButtonType = {
+				name = "slider"	
+				quadTextureSprite = "GFX_slider_circle"
+				position = { x=0 y =0}
+			}
+			guiButtonType = {
+				name = "track"
+				quadTextureSprite = "GFX_bg_horizontal_slider_220wide"
+				position = { x=0 y =0}	
+			}	
+			guiButtonType = {
+				name = "up"
+				quadTextureSprite = "GFX_slider_left"
+				position = { x=0 y =0}	
+			}
+			guiButtonType = {
+				name = "down"
+				quadTextureSprite = "GFX_slider_right"
+				position = { x=0 y =236}	
+			}		
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 157 }
+			name = "music_volume_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "SM_MUSIC_VOLUME"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		scrollbarType = {
+			name = "music_volume_scroll_bar"	
+			slider = "slider"
+			track= "track"
+			leftbutton = "up"
+			rightbutton = "down"
+			size = {x = 236 y = 16 }
+			position = {x= 58 y = 176 }	
+			minValue = 0
+			maxValue = 128
+			stepSize = 1
+			startValue = 128
+			horizontal = 1
+			
+			guiButtonType = {
+				name = "slider"	
+				quadTextureSprite = "GFX_slider_circle"
+				position = { x=0 y =0}
+			}
+			guiButtonType = {
+				name = "track"
+				quadTextureSprite = "GFX_bg_horizontal_slider_220wide"
+				position = { x=0 y =0}	
+			}	
+			guiButtonType = {
+				name = "up"
+				quadTextureSprite = "GFX_slider_left"
+				position = { x=0 y =0}	
+			}
+			guiButtonType = {
+				name = "down"
+				quadTextureSprite = "GFX_slider_right"
+				position = { x=0 y =236}	
+			}		
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 210 }
+			name = "interface_volume_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "SM_INTERFACE_VOLUME"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		scrollbarType = {
+			name = "interface_volume_scroll_bar"	
+			slider = "slider"
+			track= "track"
+			leftbutton = "up"
+			rightbutton = "down"
+			size = {x = 236 y = 16 }
+			position = {x= 58 y = 229 }	
+			minValue = 0
+			maxValue = 128
+			stepSize = 1
+			startValue = 128
+			horizontal = 1
+			
+			guiButtonType = {
+				name = "slider"	
+				quadTextureSprite = "GFX_slider_circle"
+				position = { x=0 y =0}
+			}
+			guiButtonType = {
+				name = "track"
+				quadTextureSprite = "GFX_bg_horizontal_slider_220wide"
+				position = { x=0 y =0}	
+			}	
+			guiButtonType = {
+				name = "up"
+				quadTextureSprite = "GFX_slider_left"
+				position = { x=0 y =0}	
+			}
+			guiButtonType = {
+				name = "down"
+				quadTextureSprite = "GFX_slider_right"
+				position = { x=0 y =236}	
+			}		
+		}
+		
+		instantTextBoxType={
+			position = {x = 58 y = 263 }
+			name = "effect_volume_label"
+			font = "Arial16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 236
+			maxHeight = 18
+			text = "SM_EFFECT_VOLUME"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		scrollbarType = {
+			name = "effect_volume_scroll_bar"	
+			slider = "slider"
+			track= "track"
+			leftbutton = "up"
+			rightbutton = "down"
+			size = {x = 236 y = 16 }
+			position = {x= 58 y = 282 }	
+			minValue = 0
+			maxValue = 128
+			stepSize = 1
+			startValue = 128
+			horizontal = 1
+			
+			guiButtonType = {
+				name = "slider"	
+				quadTextureSprite = "GFX_slider_circle"
+				position = { x=0 y =0}
+			}
+			guiButtonType = {
+				name = "track"
+				quadTextureSprite = "GFX_bg_horizontal_slider_220wide"
+				position = { x=0 y =0}	
+			}	
+			guiButtonType = {
+				name = "up"
+				quadTextureSprite = "GFX_slider_left"
+				position = { x=0 y =0}	
+			}
+			guiButtonType = {
+				name = "down"
+				quadTextureSprite = "GFX_slider_right"
+				position = { x=0 y =236}	
+			}		
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_party_issue_option_window"
+		size = { x=200 y=16 }
+		
+		instantTextBoxType = { 
+			name = "issue_group"
+			position = { x = 8 y = 0 }
+			font = "Arial14_black"
+			maxWidth = 110
+			maxHeight = 16	
+		}
+		
+		instantTextBoxType = { 
+			name = "issue_name"
+			position = { x = 140 y = 0 }
+			font = "Arial14_black"
+			maxWidth = 150
+			maxHeight = 16	
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_factory_option"
+		size = { x=320 y=26 }
+
+		guiButtonType = {
+			name = "bg"
+			size = { x=320 y=20 }
+			quadTextureSprite ="GFX_prod_select_factory"
+		}
+		
+		iconType = {
+			name = "output"
+			spriteType = "GFX_resources"
+			position = { x= 3 y = 1 }	
+		}	
+		
+		instantTextBoxType = { 
+			name = "name"
+			position = { x = 33 y = 1 }
+			font = "vic_18_black"
+			text = "name"	
+			maxWidth = 180
+			maxHeight = 21	
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = { 
+			name = "total_build_cost"
+			position = { x = 207 y = 3 }
+			font = "Arial12_black"
+			text = "6789¤"	
+			maxWidth = 55
+			maxHeight = 19
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = { 
+			name = "buildtime"
+			position = { x = 265 y = 3 }
+			font = "Arial12_black"
+			text = "365 Days"	
+			maxWidth = 60
+			maxHeight = 19
+			format = left
+			fixedsize = yes
+		}		
+	}
+	
+	windowType = {
+		name = "open_v2_nf_window"
+		position = { x=0 y=0 }
+		size = { x=348 y=256 }
+		moveable = 1
+		
+		guiButtonType = {	
+			name = "window_bg"
+			quadTextureSprite = "GFX_nf_overwrite_bg"
+			Orientation = "UPPER_LEFT"
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			quadTextureSprite = "GFX_main_close_button"
+			position = { x=319 y=-4 }
+			Orientation = "UPPER_LEFT"
+			shortcut = "ESCAPE"
+		}
+		
+		instantTextBoxType = {
+			position = { x=0 y=22 }
+			name = "header"
+			font = "vic_20"
+			maxWidth = 348
+			maxHeight = 26
+			text = "?"	
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+		
+		listboxType = {
+			name ="nf_listbox"
+			position = { x = 14 y = 60 }
+			backGround=""
+			size = { x = 303 y = 180 }
+			Orientation = "UPPER_LEFT"
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_nf_overwrite_entry"
+		position = { x=0 y=0 }	
+		size = { x=308 y=42 }
+		
+		guiButtonType = {
+			name = "background"
+			quadTextureSprite = "GFX_nf_overwrite_entry"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "nf_icon"
+			position = { x = 4 y = 5 }
+			spriteType ="GFX_province_natfocus_strip"
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 42 y = 2 }
+			name = "nf_name"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 264
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 42 y = 22 }
+			name = "nf_location"
+			font = "vic_16"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 264
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_generic"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 100 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 100 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 148
+			maxHeight = 62
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_generic_gradient"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 160 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 160 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 148
+			maxHeight = 62
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_gradient"
+			position = { x= 10 y = 100 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 134 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 84 y = 134 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_population"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 216 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 216 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		iconType = {
+			name = "amount_cb"
+			spriteType = "GFX_checkbox"
+			position = { x = 5 y = 34 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 40 }
+			name = "amount_cb_label"
+			text = "population_amount_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 120
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "density_cb"
+			spriteType = "GFX_checkbox"
+			position = { x= 5 y = 62 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 68 }
+			name = "density_cb_label"
+			text = "population_density_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 120
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 8 y = 98 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 58
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_gradient"
+			position = { x= 10 y = 156 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 190 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 84 y = 190 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_relations"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 160 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 160 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_relations"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 148
+			maxHeight = 62
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_rg_gradient"
+			position = { x= 10 y = 100 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 134 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 84 y = 134 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_migration"
+		position = { x = 0 y = 200 }	
+		size = { x = 174 y = 216 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 174 y = 216 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_migration"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		iconType = {
+			name = "external_cb"
+			spriteType = "GFX_checkbox"
+			position = { x = 5 y = 34 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 40 }
+			name = "external_cb_label"
+			text = "migration_external_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "internal_cb"
+			spriteType = "GFX_checkbox"
+			position = { x= 5 y = 62 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 68 }
+			name = "internal_cb_label"
+			text = "migration_internal_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 12 y = 98 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 58
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_rg_gradient"
+			position = { x= 17 y = 156 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 190 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 98 y = 190 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_icon_infra"
+		position = { x = 0 y = 0 }	
+		size = { x = 48 y = 24 }
+		
+		iconType = {
+			name = "port_icon"
+			spriteType = "GFX_openv2_small_port"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "port_level"
+			position = { x = 20 y = 4 }
+			font = "Arial18"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 24
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_infrastructure"
+		position = { x = 0 y = 200 }	
+		size = { x = 170 y = 190 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 170 y = 190 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_infrastructure"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 170
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		iconType = {
+			name = "build_rr_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x = 9 y = 41 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 40 }
+			name = "possible_railroad_label"
+			text = "possible_railroad"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "build_nb_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x= 9 y = 69 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 68 }
+			name = "possible_naval_base_label"
+			text = "possible_naval_base"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 12 y = 98 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 34
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_rail_gradient"
+			position = { x = 15 y = 132 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 166 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 94 y = 166 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	iconType = {
+		name = "open_v2_map_icon_resource"
+		spriteType = "GFX_resources_small"
+		position = { x = 0 y = 0 }
+		Orientation = "UPPER_LEFT"
+	}
+	
+	iconType = {
+		name = "open_v2_map_icon_crime"
+		spriteType = "GFX_crime_strip"
+		position = { x = 0 y = 0 }
+		Orientation = "UPPER_LEFT"
+		scale = 0.75
+	}
+		
+	windowType = {
+		name = "open_v2_rgo_legend_list_item"
+		position = { x = 0 y = 0 }	
+		size = { x = 130 y = 20 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 130 y = 20 }
+			quadTextureSprite = "GFX_openv2_legend_item_bg"
+		}
+		
+		iconType = {
+			name = "resource_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x = 1 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "resource_icon"
+			spriteType = "GFX_resources_small"
+			position = { x = 0 y = 2 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "resource_name"
+			position = { x = 25 y = 2 }
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 90
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+	
+	
+	windowType = {
+		name = "open_v2_map_legend_rgo"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 216 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 216 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_rgo"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 8 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		
+		listboxType = {
+			name = "rgo_items"
+			position = { x= 15 y = 54 }
+			size = { x = 115 y = 100 }
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_gradient"
+			position = { x= 10 y = 160 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 194 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 84 y = 194 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	
+	windowType = {
+		name = "open_v2_resource_legend_list_item"
+		position = { x = 0 y = 0 }	
+		size = { x = 130 y = 20 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 130 y = 20 }
+			quadTextureSprite = "GFX_openv2_legend_item_bg"
+		}
+		
+		iconType = {
+			name = "resource_icon"
+			spriteType = "GFX_resources_small"
+			position = { x = 0 y = 2 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "resource_name"
+			position = { x = 25 y = 2 }
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 90
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+	
+	
+	windowType = {
+		name = "open_v2_map_legend_resource"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 232 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 232 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 8 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 36
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		
+		listboxType = {
+			name = "resource_items"
+			position = { x= 15 y = 70 }
+			size = { x = 115 y = 100 }
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="gradient_icon"
+			spriteType = "GFX_openv2_rg_gradient"
+			position = { x= 10 y = 176 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 210 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 84 y = 210 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_voting_legend_list_item"
+		position = { x = 0 y = 0 }	
+		size = { x = 130 y = 20 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 130 y = 20 }
+			quadTextureSprite = "GFX_openv2_legend_item_bg"
+		}
+		
+		iconType = {
+			name = "ideology_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x = 1 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "ideology_name"
+			position = { x = 25 y = 2 }
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 90
+			maxHeight = 18
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_voting"
+		position = { x = 0 y = 200 }	
+		size = { x = 160 y = 185 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 160 y = 185 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_voting"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 160
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 8 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 36
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		
+		listboxType = {
+			name = "ideologies"
+			position = { x= 15 y = 70 }
+			size = { x = 115 y = 100 }
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			Orientation = "UPPER_LEFT"
+		}
+	}
+	
+	
+	windowType = {
+		name = "open_v2_map_legend_admin"
+		position = { x = 0 y = 200 }	
+		size = { x = 170 y = 180 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 170 y = 180 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_admin"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 170
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		iconType = {
+			name = "crime_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x = 9 y = 41 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 40 }
+			name = "crime_color_label"
+			text = "crime_color_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 12 y = 70 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 52
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "gradient_icon"
+			spriteType = "GFX_openv2_gradient"
+			position = { x = 15 y = 122 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 6 y = 156 }
+			name = "gradient_min"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType={
+			position = { x = 94 y = 156 }
+			name = "gradient_max"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 70
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = right
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_icon_unit"
+		position = { x = 0 y = 0 }	
+		size = { x = 65 y = 20 }
+		
+		iconType = {
+			name = "background"
+			spriteType = "GFX_openv2_unit_bar_center"
+			position = { x = 8 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "left"
+			spriteType = "GFX_openv2_unit_left_cap"
+			position = { x = -1 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "right"
+			spriteType = "GFX_openv2_unit_right_cap"
+			position = { x = 56 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "type"
+			spriteType = "GFX_openv2_unit_types"
+			position = { x = 12 y = 4 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		
+		iconType = {
+			name = "frame"
+			spriteType = "GFX_openv2_unit_bar_selection"
+			position = { x = 9 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 29 y = 4 }
+			name = "amount"
+			font = "Arial12"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 33
+			maxHeight = 14
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+	}
+	
+	windowType = {
+		name = "open_v2_map_icon_unit_container"
+		position = { x = 0 y = 0 }	
+		size = { x = 65 y = 50 }
+		
+		OverlappingElementsBoxType = {   
+			name = "unit_list"
+			position = { x = 0 y = 0 }
+			size = { x = 65 y = 50 }
+			format = center
+			spacing = 0
+			Orientation = "UPPER_LEFT"
+		}
+	}
+	
+	windowType = {
+		name = "open_v2_map_legend_army"
+		position = { x = 0 y = 200 }	
+		size = { x = 185 y = 230 }
+		
+		guiButtonType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { x = 185 y = 230 }
+			quadTextureSprite = "console_background"
+		}
+		
+		instantTextBoxType={
+			position = { x = 0 y = 4 }
+			name = "legend_title"
+			text = "map_legend_military"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 170
+			maxHeight = 24
+			orientation = "UPPER_LEFT"
+			format = center
+		}
+		
+		instantTextBoxType={
+			position = { x = 8 y = 34 }
+			name = "legend_contents"
+			font = "vic_16"
+			borderSize = { x = 0 y = 0 }	
+			maxWidth = 144
+			maxHeight = 54
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "show_neutral_check_box"
+			position = { x = 8 y = 90 }
+			size = { x = 20 y = 20 }
+			quadTextureSprite = "GFX_checkbox_default"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 90 }
+			name = "show_neutral_label"
+			text = "show_neutral_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "self_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x= 9 y = 113 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 112 }
+			name = "self_color_label"
+			text = "self_color_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "friendly_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x= 9 y = 134 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 135 }
+			name = "friendly_color_label"
+			text = "friendly_color_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "hostile_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x= 9 y = 156 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType={
+			position = { x = 35 y = 157 }
+			name = "hostile_color_label"
+			text = "hostile_color_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "friendly_occupation_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x= 9 y = 178 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			position = { x = 35 y = 179 }
+			name = "friendly_occupation_label"
+			text = "friendly_occupation_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		iconType = {
+			name = "hostile_occupation_color"
+			spriteType = "GFX_openv2_white_square"
+			position = { x= 9 y = 200 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			position = { x = 35 y = 201 }
+			name = "hostile_occupation_label"
+			text = "hostile_occupation_label"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0 }	
+			maxWidth = 140
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+}
