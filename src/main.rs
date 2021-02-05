@@ -1,10 +1,10 @@
 mod population;
-use crate::population::community::*;
-use crate::population::settlement::*;
 
 fn main() {
-    let first_town = Community {
-        size: 42,
-        wallet: 30000,
-    };
+    let mut paris = population::Settlement::new();
+    println!("{:?}", paris);
+    paris.add_community();
+    println!("{:?}", paris);
+    paris.society[0].add_size(23);
+    println!("{:?}", paris);
 }
