@@ -1,5 +1,0 @@
-owner = YXA
-controller = YXA
-add_core = YXA
-trade_goods = grain
-life_rating = 35

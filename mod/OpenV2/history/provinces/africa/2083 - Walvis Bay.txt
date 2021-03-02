@@ -1,5 +1,0 @@
-owner = YFO
-controller = YFO
-add_core = YFO
-trade_goods = wool
-life_rating = 15

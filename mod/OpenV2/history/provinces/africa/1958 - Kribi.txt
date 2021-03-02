@@ -1,5 +1,0 @@
-owner = YAF
-controller = YAF
-add_core = YAF
-trade_goods = coffee
-life_rating = 15

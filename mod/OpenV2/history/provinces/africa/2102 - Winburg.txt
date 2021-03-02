@@ -1,5 +1,0 @@
-owner = YFW
-controller = YFW
-add_core = YFW
-trade_goods = coal
-life_rating = 35

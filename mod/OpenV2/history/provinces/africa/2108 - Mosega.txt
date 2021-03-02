@@ -1,5 +1,0 @@
-owner = YFV
-controller = YFV
-add_core = YFV
-trade_goods = grain
-life_rating = 35

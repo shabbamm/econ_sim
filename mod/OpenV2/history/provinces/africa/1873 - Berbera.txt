@@ -1,5 +1,0 @@
-owner = YDP
-controller = YDP
-add_core = YDP
-trade_goods = cotton
-life_rating = 15

@@ -1,5 +1,0 @@
-owner = YZI
-controller = YZI
-add_core = YZI
-trade_goods = coffee
-life_rating = 15

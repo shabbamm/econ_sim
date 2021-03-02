@@ -1,5 +1,0 @@
-owner = YGB
-controller = YGB
-add_core = YGB
-trade_goods = iron
-life_rating = 35

@@ -1,6 +1,0 @@
-owner = YFB
-controller = YFB
-add_core = YFB
-add_core = ETH
-trade_goods = grain
-life_rating = 30

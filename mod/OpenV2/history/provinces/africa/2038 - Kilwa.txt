@@ -1,5 +1,0 @@
-owner = YDF
-controller = YDF
-add_core = YDF
-trade_goods = grain
-life_rating = 35

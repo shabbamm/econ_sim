@@ -1,5 +1,0 @@
-owner = YDO
-controller = YDO
-add_core = YDO
-trade_goods = grain
-life_rating = 15

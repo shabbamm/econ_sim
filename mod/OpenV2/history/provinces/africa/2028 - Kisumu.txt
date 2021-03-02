@@ -1,5 +1,0 @@
-owner = YDM
-controller = YDM
-add_core = YDM
-trade_goods = tea
-life_rating = 15

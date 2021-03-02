@@ -1,5 +1,0 @@
-owner = YYZ
-controller = YYZ
-add_core = YYZ
-trade_goods = grain
-life_rating = 15

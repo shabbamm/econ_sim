@@ -1,5 +1,0 @@
-owner = YAN
-controller = YAN
-add_core = YAN
-trade_goods = cattle
-life_rating = 15

@@ -1,5 +1,0 @@
-owner = YDD
-controller = YDD
-add_core = YDD
-trade_goods = tobacco
-life_rating = 15

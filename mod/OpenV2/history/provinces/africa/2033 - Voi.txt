@@ -1,5 +1,0 @@
-owner = YDK
-controller = YDK
-add_core = YDK
-trade_goods = grain
-life_rating = 15

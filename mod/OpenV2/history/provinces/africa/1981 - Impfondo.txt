@@ -1,5 +1,0 @@
-owner = YAJ
-controller = YAJ
-add_core = YAJ
-trade_goods = timber
-life_rating = 15

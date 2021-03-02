@@ -1,5 +1,0 @@
-owner = YDN
-controller = YDN
-add_core = YDN
-trade_goods = fruit
-life_rating = 35

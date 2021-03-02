@@ -1,6 +1,0 @@
-owner = YDS
-controller = YDS
-add_core = YDS
-trade_goods = cattle
-life_rating = 35
-

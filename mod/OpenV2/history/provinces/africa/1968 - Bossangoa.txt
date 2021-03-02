@@ -1,5 +1,0 @@
-owner = YAP
-controller = YAP
-add_core = YAP
-trade_goods = grain
-life_rating = 15

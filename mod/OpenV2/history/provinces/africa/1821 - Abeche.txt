@@ -1,5 +1,0 @@
-owner = YFI
-controller = YFI
-add_core = YFI
-trade_goods = grain
-life_rating = 10

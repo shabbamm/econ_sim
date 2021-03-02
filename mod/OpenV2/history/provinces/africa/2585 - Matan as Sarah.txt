@@ -1,5 +1,0 @@
-owner = YFG
-controller = YFG
-add_core = YFG
-trade_goods = wool
-life_rating = 10

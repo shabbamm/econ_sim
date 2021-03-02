@@ -1,5 +1,0 @@
-owner = YBT
-controller = YBT
-add_core = YBT
-trade_goods = fruit
-life_rating = 15
