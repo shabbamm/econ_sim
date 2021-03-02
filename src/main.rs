@@ -1,8 +1,9 @@
+mod geography;
 mod population;
 mod resources;
 
 fn main() {
-    let mut world_state = population::World::new();
+    let mut world_state = geography::World::new();
     //for continent in &world_state.continents {
     //    println!("{:#?}", continent);
     //}
