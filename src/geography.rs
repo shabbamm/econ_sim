@@ -12,13 +12,18 @@ pub struct Settlement {
     climate: String,
     communities: Vec<Community>,
     resource: Resource,
+    // owner
+    // controller
+    // cores
+    // resource
+    // life_rating
 }
 
 impl Settlement {
     pub fn new() -> Settlement {
         let mut communities = Vec::new();
 
-        for community in 0..250 {
+        for community in 0..50 {
             communities.push(Community::new());
         }
 

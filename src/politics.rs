@@ -13,8 +13,29 @@ pub struct Nation {
     name: String
     political_parties: Vec<Party>,
     owned_settlements: Vec<u32>,
+    capital_settlement: u16,
+    literacy: f64,
 
 }
+
+/*
+upper_house_composition
+vote_franschise
+public_meetings
+press_rights
+trade_unions
+voting_system
+political_parties
+
+wage_reform
+work_hours
+safety_regulations
+health_care
+unemployment_subsidies
+pensions 
+school_reforms
+*/
+
 /*
 party = {
     name = "ABU_conservative_2"
