@@ -1,4 +1,7 @@
-#[derive(Debug)]
+use serde::{Deserialize, Serialize};
+use serde_json::Result;
+
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Resource {
     pub name: String,
     pub facility: String,

@@ -1,33 +1,24 @@
 mod geography;
 mod population;
 mod resources;
+mod utility;
 
 fn main() {
-    let mut world_state = geography::World::new();
+    let mut world_state = geography::World::new().unwrap();
+
     //for continent in &world_state.continents {
     //    println!("{:#?}", continent);
     //}
-    //println!("{:#?}", world_state);
+    println!("{:#?}", world_state);
 }
 
 /*
-Settlment
-    Community
-        culture
-            religion
-            strata
-            location
-            size
-            money
-            literacy
-            militancy
-            conciousness
-            social_interest
-            political_interest
-            needs_satisfaction
-    Resource
-        name
-        facility
+match age {
+    Some(age) => {if 21 allowed to drink}
+    None => {age not valid}
+}
 */
 
 // unit name lists??
+
+// match statement for New / Load game
