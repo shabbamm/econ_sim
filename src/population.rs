@@ -24,10 +24,10 @@ impl Community {
     pub fn new() -> Community {
         Community {
             id: 0,
-            culture: String::from("this is a sample text that shouldnt be here but is here to test the bounds of memory"),
-            religion: String::from("this is a sample text that shouldnt be here but is here to test the bounds of memory"),
-            strata: String::from("this is a sample text that shouldnt be here but is here to test the bounds of memory"),
-            location: String::from("this is a sample text that shouldnt be here but is here to test the bounds of memory"),
+            culture: String::from("Cascadian"),
+            religion: String::from("Atheist"),
+            strata: String::from("Poor"),
+            location: String::from("Seattle"),
             size: 1,
             money: 1,
             literacy: 1.0,

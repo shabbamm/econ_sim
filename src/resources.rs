@@ -12,8 +12,8 @@ pub struct Resource {
 impl Resource {
     pub fn new() -> Resource {
         Resource {
-            name: String::from("this is a sample text that shouldnt be here but is here to test the bounds of memory"),
-            facility: String::from("this is a sample text that shouldnt be here but is here to test the bounds of memory"),
+            name: String::from("Salmon"),
+            facility: String::from("Fishery"),
             cost: 0.0,
         }
     }

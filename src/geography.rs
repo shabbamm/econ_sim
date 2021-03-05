@@ -1,32 +1,25 @@
 use crate::population::*;
 use crate::resources::*;
-use crate::utility::*;
 
 use serde::{Deserialize, Serialize};
 use serde_json::Result;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct World {
-    pub continents: Vec<String>,
+    pub continents: Vec<Continent>,
 }
 
 impl World {
-    pub fn new() -> Result<World> {
-        let continents_data = r#"{
-            "continents": [
-                "Africa",
-                "Antartica",
-                "Asia",
-                "Australia",
-                "Europe",
-                "NorthAmerica",
-                "SouthAmerica"
-            ]
-        }"#;
+    pub fn new() -> Self {
+        let mut continents = Vec::new();
 
-        let world: World = serde_json::from_str(continents_data)?;
+        for _continents in 0..1 {
+            continents.push(Continent::new());
+        }
 
-        Ok(world)
+        World {
+            continents: continents,
+        }
     }
 }
 
@@ -38,16 +31,16 @@ pub struct Continent {
 }
 
 impl Continent {
-    pub fn new(name: &str) -> Self {
+    pub fn new() -> Self {
         let mut regions = Vec::new();
 
-        for _region in 0..50 {
+        for _region in 0..1 {
             regions.push(Region::new());
         }
 
         Continent {
             id: 0,
-            name: String::from(name),
+            name: String::from(""),
             regions: regions,
         }
     }
@@ -64,7 +57,7 @@ impl Region {
     pub fn new() -> Self {
         let mut settlements = Vec::new();
 
-        for _settlement in 0..10 {
+        for _settlement in 0..1 {
             settlements.push(Settlement::new());
         }
 
@@ -98,7 +91,7 @@ impl Settlement {
     pub fn new() -> Settlement {
         let mut communities = Vec::new();
 
-        for _community in 0..50 {
+        for _community in 0..1 {
             communities.push(Community::new());
         }
 
@@ -108,9 +101,7 @@ impl Settlement {
             is_sea: false,
             is_coastal: false,
             is_lake: false,
-            climate: String::from(
-                "this is super temporary and no climate is going to be this long",
-            ),
+            climate: String::from("Temperate"),
             communities: communities,
             resource: Resource::new(),
         }

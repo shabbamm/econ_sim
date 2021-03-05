@@ -1,18 +1,30 @@
 mod geography;
 mod population;
 mod resources;
-mod utility;
 
 fn main() {
-    let mut world_state = geography::World::new().unwrap();
+    let data = r#"{
+        "continent_name": [
+            "Africa",
+            "Antartica",
+            "Asia",
+            "Australia",
+            "Europe",
+            "NorthAmerica",
+            "SouthAmerica"
+        ]
+    }"#;
+
+    let mut world_state = geography::World::new();
+
+    println!("{:#?}", world_state);
 
     //for continent in &world_state.continents {
     //    println!("{:#?}", continent);
     //}
-    println!("{:#?}", world_state);
 }
 
-/*
+/*8
 match age {
     Some(age) => {if 21 allowed to drink}
     None => {age not valid}
