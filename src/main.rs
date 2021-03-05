@@ -3,21 +3,9 @@ mod population;
 mod resources;
 
 fn main() {
-    let data = r#"{
-        "continent_name": [
-            "Africa",
-            "Antartica",
-            "Asia",
-            "Australia",
-            "Europe",
-            "NorthAmerica",
-            "SouthAmerica"
-        ]
-    }"#;
-
     let mut world_state = geography::World::new();
 
-    println!("{:#?}", world_state);
+    println!("{:?}", world_state);
 
     //for continent in &world_state.continents {
     //    println!("{:#?}", continent);

@@ -1,3 +1,6 @@
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Party {
     name: String,
     ideology: String,
@@ -8,6 +11,7 @@ pub struct Party {
     war_policy: String,
 }
 
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Nation {
     id: u16,
     name: String

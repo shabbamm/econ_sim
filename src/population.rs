@@ -1,7 +1,6 @@
 use crate::resources::*;
 
 use serde::{Deserialize, Serialize};
-use serde_json::Result;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Community {
@@ -37,14 +36,6 @@ impl Community {
             political_interest: 1.0,
             needs_satisfaction: 1.0,
         }
-    }
-
-    pub fn update_size(&mut self, quantity: u32) {
-        self.size += quantity;
-    }
-
-    pub fn update_money(&mut self, quantity: i64) {
-        self.money += quantity;
     }
 }
 
