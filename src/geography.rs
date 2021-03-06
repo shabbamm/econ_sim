@@ -10,32 +10,20 @@ pub struct World {
 }
 
 impl World {
-    pub fn new() -> Result<World> {
-        let data = r#"{
-            "continent_name": [
-                "Africa",
-                "Antartica",
-                "Asia",
-                "Australia",
-                "Europe",
-                "NorthAmerica",
-                "SouthAmerica"
-            ]
-        }"#;
-
-        let name: Value = serde_json::from_str(data)?;
-
+    pub fn new() -> Self {
         let mut continents = Vec::new();
-
-        for continent in 0..1 {
-            continents.push(Continent::new(name["continent_name"][continent]));
+        let data = r#""#;
+        // data for the names of the continents are here
+        for continent in 0..1
+        /* the 1 here should be the length of the list of continents, or for continent in [Vec of continents] */
+        {
+            continents
+                .push(Continent::new(/*the name of the continent being created is passed here*/));
         }
 
-        let world = World {
+        World {
             continents: continents,
-        };
-
-        Ok(world)
+        }
     }
 }
 
@@ -47,16 +35,18 @@ pub struct Continent {
 }
 
 impl Continent {
-    pub fn new(continent_name: Value) -> Self {
+    pub fn new(/* the name is passed to here from above */) -> Self {
         let mut regions = Vec::new();
-
-        for _region in 0..1 {
-            regions.push(Region::new());
+        // the the data for the regions should be here, based on the name above
+        for _region in 0..1
+        /* for each region in [continent_name] add new region */
+        {
+            regions.push(Region::new(/* the name for each region is passed here to create */));
         }
 
         Continent {
             id: 0,
-            name: String::from(""),
+            name: String::from(""), /* this is set from the above value that is passed into the new() */
             regions: regions,
         }
     }
@@ -70,11 +60,13 @@ pub struct Region {
 }
 
 impl Region {
-    pub fn new() -> Self {
+    pub fn new(/* the name is passed here from above */) -> Self {
         let mut settlements = Vec::new();
 
-        for _settlement in 0..1 {
-            settlements.push(Settlement::new());
+        for _settlement in 0..1
+        /*the 1 should also be replaced based on how many settlements there are in a specific region*/
+        {
+            settlements.push(Settlement::new(/*here is where we dont just pass in the name of the settlement, but also other data from it*/));
         }
 
         Region {

@@ -1,12 +1,11 @@
 mod geography;
 mod population;
 mod resources;
+mod utility;
 
 fn main() {
-    let mut world_state = geography::World::new();
-
-    println!("{:?}", world_state);
-
+    let mut world = geography::World::new();
+    println!("{:#?}", world);
     //for continent in &world_state.continents {
     //    println!("{:#?}", continent);
     //}
