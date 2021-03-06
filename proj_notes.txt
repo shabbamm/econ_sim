@@ -1,24 +1,16 @@
-bevy engine seems litty
-
-world
-    region
-        counties
-            pops
-                class
-                nationality
-                job
-                culture
-                religion
-                wealth
-    nations
-        name
-        treasury
-        total pops
-        territory
-
-traits
-    land
-    sea
-    air
-    owner
-    resource
+World
+    Continents
+        Region
+            Settlment
+                Pops
+                    Strata
+                    Nationality
+                    Job
+                    Culture
+                    Religion
+                    Wealth
+    Nations
+        Name
+        Treasury
+        Total_pops
+        Territory
