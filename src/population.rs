@@ -5,37 +5,23 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Community {
     pub id: u32,
-    pub culture: String,
-    pub religion: String,
-    pub strata: String,
-    pub location: String,
+    //pub culture: String,
+    //pub religion: String,
+    //pub strata: String,
+    //pub location: String,
     pub size: u32,
-    pub money: i64,
-    pub literacy: f64,
-    pub militancy: f64,
-    pub conciousness: f64,
-    pub political_interest: f64,
-    pub social_interest: f64,
-    pub needs_satisfaction: f64,
+    //pub money: i64,
+    //pub literacy: f64,
+    //pub militancy: f64,
+    //pub conciousness: f64,
+    //pub political_interest: f64,
+    //pub social_interest: f64,
+    //pub needs_satisfaction: f64,
 }
 
 impl Community {
-    pub fn new() -> Community {
-        Community {
-            id: 0,
-            culture: String::from("Cascadian"),
-            religion: String::from("Atheist"),
-            strata: String::from("Poor"),
-            location: String::from("Seattle"),
-            size: 1,
-            money: 1,
-            literacy: 1.0,
-            militancy: 1.0,
-            conciousness: 1.0,
-            social_interest: 1.0,
-            political_interest: 1.0,
-            needs_satisfaction: 1.0,
-        }
+    pub fn new(id: u32, size: u32) -> Community {
+        Community { id: id, size: size }
     }
 }
 
