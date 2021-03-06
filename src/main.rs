@@ -3,6 +3,8 @@ mod population;
 mod resources;
 mod utility;
 
+use serde::{Deserialize, Serialize};
+
 fn main() {
     let mut world = geography::World::new();
     println!("{:#?}", world);
@@ -10,6 +12,9 @@ fn main() {
     //    println!("{:#?}", continent);
     //}
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+struct GameState {}
 
 /*8
 match age {
