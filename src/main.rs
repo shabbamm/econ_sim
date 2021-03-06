@@ -3,26 +3,16 @@ mod population;
 mod resources;
 mod utility;
 
-use serde::{Deserialize, Serialize};
+use geography::*;
+use std::collections::HashMap;
 
-fn main() {
-    let mut world = geography::World::new();
-    println!("{:#?}", world);
-    //for continent in &world_state.continents {
-    //    println!("{:#?}", continent);
-    //}
+fn main() {}
+
+struct GameState {
+    world: HashMap<u32, World>,
+    contintents: HashMap<u32, Continent>,
+    regions: HashMap<u32, Region>,
+    settlement: HashMap<u32, Settlement>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
-struct GameState {}
-
-/*8
-match age {
-    Some(age) => {if 21 allowed to drink}
-    None => {age not valid}
-}
-*/
-
-// unit name lists??
-
-// match statement for New / Load game
+impl GameState {}
