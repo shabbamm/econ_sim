@@ -11,7 +11,9 @@ use std::collections::HashMap;
 fn main() {
     let mut game_state = GameState::new();
 
-    game_state.create_new_world(0, String::from("Earth"));
+    for world in 0..1 {
+        game_state.create_new_world(world, String::from("Earth"));
+    }
 
     for continent in 0..1 {
         game_state.create_new_continent(continent, String::from("Africa"));
