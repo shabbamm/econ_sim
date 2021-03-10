@@ -1,11 +1,30 @@
 {
-    "continent_name": [
-        "Africa",
-        "Antartica",
-        "Asia",
-        "Australia",
-        "Europe",
-        "NorthAmerica",
-        "SouthAmerica"
-    ]
+    "0": {
+        "id": 0,
+        "name": "Africa"
+    },
+    "1": {
+        "id": 1,
+        "name": "Antartica"
+    },
+    "2": {
+        "id": 2,
+        "name": "Asia"
+    },
+    "3": {
+        "id": 3,
+        "name": "Australia"
+    },
+    "4": {
+        "id": 4,
+        "name": "Europe"
+    },
+    "5": {
+        "id": 5,
+        "name": "North America"
+    },
+    "6": {
+        "id": 6,
+        "name": "South America"
+    }
 }

@@ -5,18 +5,13 @@ mod utility;
 
 use geography::*;
 use population::Community;
+use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-
-use serde_json::Value;
-use std::error::Error;
-use std::fs;
 
 fn main() {
     let mut game_state = GameState::new();
 
-    for world in 0..1 {
-        game_state.create_new_world(world, String::from("Earth"));
-    }
+    game_state.create_new_world(0, String::from("Earth"));
 
     for continent in 0..1 {
         game_state.create_new_continent(continent, String::from("Africa"));
@@ -37,10 +32,9 @@ fn main() {
     //add continents
     //add regions
     //etc
-    println!("{:#?}", game_state);
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 struct GameState {
     worlds: HashMap<u32, World>,
     continents: HashMap<u32, Continent>,
