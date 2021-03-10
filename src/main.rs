@@ -7,6 +7,10 @@ use geography::*;
 use population::Community;
 use std::collections::HashMap;
 
+use serde_json::Value;
+use std::error::Error;
+use std::fs;
+
 fn main() {
     let mut game_state = GameState::new();
 
