@@ -7,9 +7,13 @@ use geography::*;
 use population::Community;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+use std::path::Path;
+use utility::*;
 
 fn main() {
     let mut game_state = GameState::new();
+
+    load_file_to_buffer(Path::new("config/geography/worlds.json"));
 
     for world in 0..1 {
         game_state.create_new_world(world, String::from("Earth"));

@@ -1,8 +1,4 @@
-use crate::population::*;
-use crate::resources::*;
-
 use serde::{Deserialize, Serialize};
-use serde_json::{Result, Value};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct World {
