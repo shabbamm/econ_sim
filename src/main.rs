@@ -12,8 +12,10 @@ use utility::*;
 
 fn main() {
     let mut game_state = GameState::new();
-
-    load_file_to_buffer(Path::new("config/geography/worlds.json"));
+    println!(
+        "{:?}",
+        load_scenario_file(Path::new("config/geography/worlds.json"))
+    );
 
     for world in 0..1 {
         game_state.create_new_world(world, String::from("Earth"));
