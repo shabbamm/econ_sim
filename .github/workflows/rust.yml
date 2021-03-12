@@ -2,7 +2,9 @@ name: Rust
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - master
+    - shabbamm
   pull_request:
     branches: [ master ]
 
