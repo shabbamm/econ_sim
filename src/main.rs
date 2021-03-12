@@ -13,6 +13,7 @@ use utility::*;
 fn main() {
     let mut game_state = GameState::new();
     // testing the build file for github actions
+    // something isnt working
     println!(
         "{:?}",
         load_scenario_file(Path::new("config/geography/worlds.json"))
