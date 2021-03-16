@@ -21,7 +21,7 @@ pub struct Community {
 
 impl Community {
     pub fn new(id: u32, size: u32) -> Community {
-        Community { id: id, size: size }
+        Community { id, size }
     }
 }
 

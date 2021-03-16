@@ -8,7 +8,7 @@ pub struct World {
 
 impl World {
     pub fn new(id: u32, name: String) -> Self {
-        World { id: id, name: name }
+        World { id, name }
     }
 }
 
@@ -20,7 +20,7 @@ pub struct Continent {
 
 impl Continent {
     pub fn new(id: u32, name: String) -> Self {
-        Continent { id: id, name: name }
+        Continent { id, name }
     }
 }
 
@@ -32,7 +32,7 @@ pub struct Region {
 
 impl Region {
     pub fn new(id: u32, name: String) -> Self {
-        Region { id: id, name: name }
+        Region { id, name }
     }
 }
 
@@ -56,9 +56,9 @@ pub struct Settlement {
 impl Settlement {
     pub fn new(id: u32, name: String, resource_id: u32) -> Settlement {
         Settlement {
-            id: id,
-            name: name,
-            resource_id: resource_id,
+            id,
+            name,
+            resource_id,
         }
     }
 }
