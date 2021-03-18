@@ -14,10 +14,12 @@ fn main() {
     let mut game_state = GameState::new();
     // testing the build file for github actions
     // something isnt working
-    println!(
-        "{:?}",
-        load_scenario_file(Path::new("config/geography/worlds.json"))
-    );
+    //println!(
+    //    "{:?}",
+    //    load_config(Path::new("config/geography/worlds.json"))
+    //);
+
+    //string_to_serde_value(Path::new("config/geography/worlds.json"));
 
     for world in 0..1 {
         game_state.create_new_world(world, String::from("Earth"));
@@ -38,10 +40,8 @@ fn main() {
     for community in 0..1 {
         game_state.create_new_community(community, 999);
     }
-    //add worlds
-    //add continents
-    //add regions
-    //etc
+
+    println!("{:#?}", game_state);
 }
 
 #[derive(Debug, Serialize, Deserialize)]
