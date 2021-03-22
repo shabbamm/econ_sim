@@ -7,9 +7,9 @@ use std::fs::File;
 use std::io::BufReader;
 use std::path::Path;
 
-pub struct LoadConfig;
+pub struct Config;
 
-impl LoadConfig {
+impl Config {
     pub fn load_config<T: de::DeserializeOwned, P: AsRef<Path>>(
         path: P,
     ) -> Result<HashMap<u32, T>, Box<Error>> {

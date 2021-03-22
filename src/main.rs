@@ -7,32 +7,11 @@ use geography::*;
 use population::Community;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use utility::LoadConfig;
+use utility::Config;
 
 fn main() {
-    let mut game_state = GameState::new();
-
-    game_state.worlds = LoadConfig::load_config("config/worlds.json").unwrap();
-    game_state.continents = LoadConfig::load_config("config/continents.json").unwrap();
-    game_state.regions = LoadConfig::load_config("config/regions.json").unwrap();
-    game_state.provinces = LoadConfig::load_config("config/provinces.json").unwrap();
-    game_state.communities = LoadConfig::load_config("config/communities.json").unwrap();
-
-    for world in game_state.worlds {
-        println!("{:?}", world);
-    }
-    for continent in game_state.continents {
-        println!("{:?}", continent);
-    }
-    for region in game_state.regions {
-        println!("{:?}", region);
-    }
-    for province in game_state.provinces {
-        println!("{:?}", province);
-    }
-    for community in game_state.communities {
-        println!("{:?}", community);
-    }
+    let mut game_state = GameState::init_from_config();
+    println!("{:#?}", game_state);
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -53,6 +32,16 @@ impl GameState {
             provinces: HashMap::new(),
             communities: HashMap::new(),
         }
+    }
+
+    fn init_from_config() -> GameState {
+        let mut game_state = GameState::new();
+        game_state.worlds = Config::load_config("config/worlds.json").unwrap();
+        game_state.continents = Config::load_config("config/continents.json").unwrap();
+        game_state.regions = Config::load_config("config/regions.json").unwrap();
+        game_state.provinces = Config::load_config("config/provinces.json").unwrap();
+        game_state.communities = Config::load_config("config/communities.json").unwrap();
+        game_state
     }
 
     fn new_world(self: &mut Self, id: u32, name: String) {
