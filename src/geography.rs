@@ -38,14 +38,14 @@ impl Region {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Province {
-    // we live in a settlment; bottom text
+    // we live in a province; bottom text
     id: u32,
     name: String,
+    resource_id: u32,
     //is_sea: bool,
     //is_coastal: bool,
     //is_lake: bool,
     //climate: String,
-    resource_id: u32,
     // owner
     // controller
     // cores
