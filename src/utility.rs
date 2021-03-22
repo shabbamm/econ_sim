@@ -18,7 +18,7 @@ impl LoadConfig {
 
         Ok(data)
     }
-    pub fn load_continents<P: AsRef<Path>>(path: P) -> Result<Continent, Box<Error>> {
+    pub fn load_continents<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Continent>, Box<Error>> {
         let file = File::open(path).expect("JSON config file failed to open");
 
         let reader = BufReader::new(file);
@@ -27,7 +27,7 @@ impl LoadConfig {
 
         Ok(data)
     }
-    pub fn load_region<P: AsRef<Path>>(path: P) -> Result<Region, Box<Error>> {
+    pub fn load_region<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Region>, Box<Error>> {
         let file = File::open(path).expect("JSON config file failed to open");
 
         let reader = BufReader::new(file);
@@ -36,7 +36,7 @@ impl LoadConfig {
 
         Ok(data)
     }
-    pub fn load_province<P: AsRef<Path>>(path: P) -> Result<Province, Box<Error>> {
+    pub fn load_province<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, Province>, Box<Error>> {
         let file = File::open(path).expect("JSON config file failed to open");
 
         let reader = BufReader::new(file);
@@ -45,7 +45,9 @@ impl LoadConfig {
 
         Ok(data)
     }
-    pub fn load_communities<P: AsRef<Path>>(path: P) -> Result<Community, Box<Error>> {
+    pub fn load_communities<P: AsRef<Path>>(
+        path: P,
+    ) -> Result<HashMap<u32, Community>, Box<Error>> {
         let file = File::open(path).expect("JSON config file failed to open");
 
         let reader = BufReader::new(file);

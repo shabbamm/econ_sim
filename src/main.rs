@@ -13,9 +13,18 @@ use utility::LoadConfig;
 fn main() {
     let mut game_state = GameState::new();
 
-    let data = LoadConfig::load_worlds(Path::new("config/geography/worlds.json"));
+    game_state.worlds = LoadConfig::load_worlds(Path::new("config/geography/worlds.json")).unwrap();
 
-    println!("{:#?}", data);
+    for world in game_state.worlds {}
+
+    game_state.continents =
+        LoadConfig::load_continents(Path::new("config/geography/continents.json")).unwrap();
+
+    for continent in game_state.continents {
+        println!("{:?}", continent);
+    }
+
+    //println!("{:?}", game_state);
 }
 
 #[derive(Debug, Serialize, Deserialize)]
