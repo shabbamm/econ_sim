@@ -12,11 +12,11 @@ use utility::LoadConfig;
 fn main() {
     let mut game_state = GameState::new();
 
-    game_state.worlds = LoadConfig::load_worlds("config/worlds.json").unwrap();
-    game_state.continents = LoadConfig::load_continents("config/continents.json").unwrap();
-    game_state.regions = LoadConfig::load_region("config/regions.json").unwrap();
-    game_state.provinces = LoadConfig::load_province("config/provinces.json").unwrap();
-    game_state.communities = LoadConfig::load_communities("config/communities.json").unwrap();
+    game_state.worlds = LoadConfig::load_config("config/worlds.json").unwrap();
+    game_state.continents = LoadConfig::load_config("config/continents.json").unwrap();
+    game_state.regions = LoadConfig::load_config("config/regions.json").unwrap();
+    game_state.provinces = LoadConfig::load_config("config/provinces.json").unwrap();
+    game_state.communities = LoadConfig::load_config("config/communities.json").unwrap();
 
     for world in game_state.worlds {
         println!("{:?}", world);
