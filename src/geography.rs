@@ -37,7 +37,7 @@ impl Region {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Settlement {
+pub struct Province {
     // we live in a settlment; bottom text
     id: u32,
     name: String,
@@ -53,9 +53,9 @@ pub struct Settlement {
     // life_rating
 }
 
-impl Settlement {
-    pub fn new(id: u32, name: String, resource_id: u32) -> Settlement {
-        Settlement {
+impl Province {
+    pub fn new(id: u32, name: String, resource_id: u32) -> Province {
+        Province {
             id,
             name,
             resource_id,

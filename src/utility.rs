@@ -1,23 +1,57 @@
-use serde_json::{Result, Value};
-use std::fs;
+use crate::geography::*;
+use crate::population::*;
+use std::collections::HashMap;
+use std::error::Error;
 use std::fs::File;
 use std::io::BufReader;
-use std::io::Error;
 use std::path::Path;
 
-// file path input
-// struct with populated data output
+pub struct LoadConfig;
 
-fn json_to_string(path: &Path) -> String {
-    let contents = fs::read_to_string(path).unwrap();
-    contents
-}
+impl LoadConfig {
+    pub fn load_worlds<P: AsRef<Path>>(path: P) -> Result<HashMap<u32, World>, Box<Error>> {
+        let file = File::open(path).expect("JSON config file failed to open");
 
-pub fn string_to_serde_value(path: &Path) -> Result<()> {
-    let data = &json_to_string(path)[..];
+        let reader = BufReader::new(file);
 
-    let v: Value = serde_json::from_str(data)?;
+        let data = serde_json::from_reader(reader)?;
 
-    println!("{:?}", v);
-    Ok(())
+        Ok(data)
+    }
+    pub fn load_continents<P: AsRef<Path>>(path: P) -> Result<Continent, Box<Error>> {
+        let file = File::open(path).expect("JSON config file failed to open");
+
+        let reader = BufReader::new(file);
+
+        let data = serde_json::from_reader(reader)?;
+
+        Ok(data)
+    }
+    pub fn load_region<P: AsRef<Path>>(path: P) -> Result<Region, Box<Error>> {
+        let file = File::open(path).expect("JSON config file failed to open");
+
+        let reader = BufReader::new(file);
+
+        let data = serde_json::from_reader(reader)?;
+
+        Ok(data)
+    }
+    pub fn load_province<P: AsRef<Path>>(path: P) -> Result<Province, Box<Error>> {
+        let file = File::open(path).expect("JSON config file failed to open");
+
+        let reader = BufReader::new(file);
+
+        let data = serde_json::from_reader(reader)?;
+
+        Ok(data)
+    }
+    pub fn load_communities<P: AsRef<Path>>(path: P) -> Result<Community, Box<Error>> {
+        let file = File::open(path).expect("JSON config file failed to open");
+
+        let reader = BufReader::new(file);
+
+        let data = serde_json::from_reader(reader)?;
+
+        Ok(data)
+    }
 }
