@@ -12,7 +12,7 @@ pub struct Config;
 impl Config {
     pub fn load_config<T: de::DeserializeOwned, P: AsRef<Path>>(
         path: P,
-    ) -> Result<HashMap<u32, T>, Box<Error>> {
+    ) -> Result<HashMap<usize, T>, Box<Error>> {
         let file = File::open(path).expect("JSON config file failed to open");
 
         let reader = BufReader::new(file);

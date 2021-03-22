@@ -4,12 +4,12 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Community {
-    pub id: u32,
+    pub id: usize,
     //pub culture: String,
     //pub religion: String,
     //pub strata: String,
     //pub location: String,
-    pub size: u32,
+    pub size: usize,
     //pub money: i64,
     //pub literacy: f64,
     //pub militancy: f64,
@@ -20,7 +20,7 @@ pub struct Community {
 }
 
 impl Community {
-    pub fn new(id: u32, size: u32) -> Community {
+    pub fn new(id: usize, size: usize) -> Community {
         Community { id, size }
     }
 }

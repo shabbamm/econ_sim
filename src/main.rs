@@ -11,16 +11,23 @@ use utility::Config;
 
 fn main() {
     let mut game_state = GameState::init_from_config();
+
+    let result = game_state.communities.contains_key(&0);
+
+    for num in 0..1 {
+        game_state.new_community(game_state.communities.len(), 348 / 13 * num + 1);
+    }
+
     println!("{:#?}", game_state);
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 struct GameState {
-    worlds: HashMap<u32, World>,
-    continents: HashMap<u32, Continent>,
-    regions: HashMap<u32, Region>,
-    provinces: HashMap<u32, Province>,
-    communities: HashMap<u32, Community>,
+    worlds: HashMap<usize, World>,
+    continents: HashMap<usize, Continent>,
+    regions: HashMap<usize, Region>,
+    provinces: HashMap<usize, Province>,
+    communities: HashMap<usize, Community>,
 }
 
 impl GameState {
@@ -44,22 +51,22 @@ impl GameState {
         game_state
     }
 
-    fn new_world(self: &mut Self, id: u32, name: String) {
+    fn new_world(self: &mut Self, id: usize, name: String) {
         self.worlds.insert(id, World::new(id, name));
     }
 
-    fn new_continent(self: &mut Self, id: u32, name: String) {
+    fn new_continent(self: &mut Self, id: usize, name: String) {
         self.continents.insert(id, Continent::new(id, name));
     }
 
-    fn new_region(self: &mut Self, id: u32, name: String) {
+    fn new_region(self: &mut Self, id: usize, name: String) {
         self.regions.insert(id, Region::new(id, name));
     }
-    fn new_province(self: &mut Self, id: u32, name: String, resource_id: u32) {
+    fn new_province(self: &mut Self, id: usize, name: String, resource_id: usize) {
         self.provinces
             .insert(id, Province::new(id, name, resource_id));
     }
-    fn new_community(self: &mut Self, id: u32, size: u32) {
+    fn new_community(self: &mut Self, id: usize, size: usize) {
         self.communities.insert(id, Community::new(id, size));
     }
 }
