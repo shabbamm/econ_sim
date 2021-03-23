@@ -5,11 +5,11 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Community {
     pub id: usize,
+    pub size: usize,
     //pub culture: String,
     //pub religion: String,
     //pub strata: String,
     //pub location: String,
-    pub size: usize,
     //pub money: i64,
     //pub literacy: f64,
     //pub militancy: f64,

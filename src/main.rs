@@ -5,17 +5,17 @@ mod utility;
 
 use geography::*;
 use population::Community;
+use rand::Rng;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use utility::Config;
 
 fn main() {
     let mut game_state = GameState::init_from_config();
+    let mut rng = rand::thread_rng();
 
-    let result = game_state.communities.contains_key(&0);
-
-    for num in 0..1 {
-        game_state.new_community(game_state.communities.len(), 348 / 13 * num + 1);
+    for num in 0..10 {
+        game_state.new_community(game_state.communities.len(), rng.gen_range(0..1000000));
     }
 
     println!("{:#?}", game_state);
