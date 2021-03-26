@@ -10,7 +10,7 @@ pub struct Community {
     //pub religion: String,
     //pub strata: String,
     //pub location: String,
-    //pub money: i64,
+    pub money: usize,
     //pub literacy: f64,
     //pub militancy: f64,
     //pub conciousness: f64,
@@ -20,8 +20,8 @@ pub struct Community {
 }
 
 impl Community {
-    pub fn new(id: usize, size: usize) -> Community {
-        Community { id, size }
+    pub fn new(id: usize, size: usize, money: usize) -> Community {
+        Community { id, size, money }
     }
 }
 
