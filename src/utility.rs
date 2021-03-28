@@ -38,23 +38,36 @@ impl GameState {
         game_state
     }
 
-    pub fn add_world(self: &mut Self, id: usize, name: String) {
-        self.worlds.insert(id, World::new(id, name));
+    pub fn add_world(self: &mut Self, name: &str) {
+        let id = self.worlds.len();
+        self.worlds.insert(id, World::new(id, name.to_owned()));
     }
 
-    pub fn add_continent(self: &mut Self, id: usize, name: String) {
-        self.continents.insert(id, Continent::new(id, name));
+    pub fn add_continent(self: &mut Self, world_id: usize, name: &str) {
+        let id = self.continents.len();
+        self.continents
+            .insert(id, Continent::new(world_id, id, name.to_owned()));
     }
 
-    pub fn add_region(self: &mut Self, id: usize, name: String) {
-        self.regions.insert(id, Region::new(id, name));
+    pub fn add_region(self: &mut Self, continent_id: usize, name: String) {
+        let id = self.regions.len();
+        self.regions.insert(id, Region::new(continent_id, id, name));
     }
-    pub fn add_province(self: &mut Self, id: usize, name: String, resource_id: usize) {
+    pub fn add_province(self: &mut Self, region_id: usize, name: String, resource_id: usize) {
+        let id = self.provinces.len();
         self.provinces
-            .insert(id, Province::new(id, name, resource_id));
+            .insert(id, Province::new(region_id, id, name, resource_id));
     }
-    pub fn add_community(self: &mut Self, id: usize, size: usize, money: usize) {
-        self.communities.insert(id, Community::new(id, size, money));
+    pub fn add_community(self: &mut Self, province_id: usize, size: usize, money: isize) {
+        let id = self.communities.len();
+        self.communities
+            .insert(id, Community::new(province_id, id, size, money));
+    }
+
+    pub fn cost_of_living(self: &mut Self) {
+        for community in 0..self.communities.len() {
+            self.communities.get_mut(&community).unwrap().money -= 10;
+        }
     }
 }
 

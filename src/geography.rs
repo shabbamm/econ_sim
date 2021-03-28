@@ -14,31 +14,38 @@ impl World {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Continent {
+    pub world_id: usize,
     pub id: usize,
     pub name: String,
 }
 
 impl Continent {
-    pub fn new(id: usize, name: String) -> Self {
-        Continent { id, name }
+    pub fn new(world_id: usize, id: usize, name: String) -> Self {
+        Continent { world_id, id, name }
     }
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Region {
+    pub continent_id: usize,
     pub id: usize,
     pub name: String,
 }
 
 impl Region {
-    pub fn new(id: usize, name: String) -> Self {
-        Region { id, name }
+    pub fn new(continent_id: usize, id: usize, name: String) -> Self {
+        Region {
+            continent_id,
+            id,
+            name,
+        }
     }
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Province {
     // we live in a province; bottom text
+    region_id: usize,
     id: usize,
     name: String,
     resource_id: usize,
@@ -54,8 +61,9 @@ pub struct Province {
 }
 
 impl Province {
-    pub fn new(id: usize, name: String, resource_id: usize) -> Province {
+    pub fn new(region_id: usize, id: usize, name: String, resource_id: usize) -> Province {
         Province {
+            region_id,
             id,
             name,
             resource_id,
