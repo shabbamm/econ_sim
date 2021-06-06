@@ -1,17 +1,22 @@
 package com.sim.geography;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Region {
-    int continentId;
-    int id;
-    String name;
+    @JsonProperty("continentId")
+    public int continentId;
+    @JsonProperty("id")
+    public int id;
+    @JsonProperty("name")
+    public String name;
+
+    public Region() {
+        
+    }
 
     public Region(int continentId, int id, String name) {
-        System.out.println("Continent " + id + " initializing...");
-
         this.continentId = continentId;
         this.id = id;
         this.name = name;
-
-        System.out.print("Done!");
     }
 }
