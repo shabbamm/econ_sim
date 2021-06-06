@@ -2,9 +2,11 @@ package com.sim;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sim.geography.Community;
 import com.sim.geography.Continent;
 import com.sim.geography.Dimension;
@@ -22,11 +24,28 @@ public class GameState {
     public HashMap<Integer, Province> provinces;
     public HashMap<Integer, Community> communities;
 
-    public GameState() throws FileNotFoundException {
+    public GameState() throws IOException {
         System.out.println("GameState initializing...");
-        // ObjectMapper objectMapper = new ObjectMapper();
 
-        loadConfig("config/dimensions.json");
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        /*
+         * this.dimensions =
+         * objectMapper.readValue(loadConfig("config/dimensions.json"), new
+         * TypeReference<HashMap<Integer, Dimension>>() { }); String jsonObject =
+         * "{\"brand\":\"ford\", \"doors\":5}";
+         * 
+         * ObjectMapper objectMapper = new ObjectMapper(); Map<String, Object> jsonMap =
+         * objectMapper.readValue(, );
+         */
+
+        this.dimensions = new HashMap<>();
+        this.dimensions.put(0, new Dimension(0, "alpha"));
+
+        Dimension test = this.dimensions.get(0);
+
+        objectMapper.writeValueAsString(test);
+
         loadConfig("config/galaxies.json");
         loadConfig("config/worlds.json");
         loadConfig("config/continents.json");
@@ -34,7 +53,7 @@ public class GameState {
         loadConfig("config/provinces.json");
         loadConfig("config/communities.json");
 
-        System.out.println("GameState initialized!");
+        System.out.println("GameState done!");
     }
 
     public String loadConfig(String filename) throws FileNotFoundException {
