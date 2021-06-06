@@ -1,18 +1,17 @@
-package aylah;
+package com.sim;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import main.java.aylah.geography.Community;
-import main.java.aylah.geography.Continent;
-import main.java.aylah.geography.Dimension;
-import main.java.aylah.geography.Galaxy;
-import main.java.aylah.geography.Province;
-import main.java.aylah.geography.Region;
-import main.java.aylah.geography.World;
-
+import com.sim.geography.Community;
+import com.sim.geography.Continent;
+import com.sim.geography.Dimension;
+import com.sim.geography.Galaxy;
+import com.sim.geography.Province;
+import com.sim.geography.Region;
+import com.sim.geography.World;
 
 public class GameState {
     public HashMap<Integer, Dimension> dimensions;
@@ -23,10 +22,9 @@ public class GameState {
     public HashMap<Integer, Province> provinces;
     public HashMap<Integer, Community> communities;
 
-
     public GameState() throws FileNotFoundException {
         System.out.println("GameState initializing...");
-        //ObjectMapper objectMapper = new ObjectMapper();
+        // ObjectMapper objectMapper = new ObjectMapper();
 
         loadConfig("config/dimensions.json");
         loadConfig("config/galaxies.json");
@@ -39,7 +37,7 @@ public class GameState {
         System.out.println("GameState initialized!");
     }
 
-    public String loadConfig(String filename) throws FileNotFoundException{
+    public String loadConfig(String filename) throws FileNotFoundException {
         File file = new File(filename);
         Scanner scanner = new Scanner(file);
         String data = new String();
@@ -47,7 +45,7 @@ public class GameState {
         while (scanner.hasNextLine()) {
             data += scanner.nextLine();
         }
-        
+
         scanner.close();
         return data;
     }

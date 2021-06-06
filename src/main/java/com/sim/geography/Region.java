@@ -1,5 +1,4 @@
-package aylah.geography;
-
+package com.sim.geography;
 
 public class Region {
     int continentId;

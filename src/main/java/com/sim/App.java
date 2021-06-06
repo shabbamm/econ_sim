@@ -1,4 +1,5 @@
-package main.java.aylah;
+package com.sim;
+
 import java.io.FileNotFoundException;
 
 public class App {
