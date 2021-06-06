@@ -5,11 +5,11 @@ public class Dimension {
     String name;
 
     public Dimension(int id, String name) {
-        System.out.println("Dimension " + id + " initializing...");
+        System.out.print("Dimension " + id + " initializing...");
 
         this.id = id;
         this.name = name;
 
-        System.out.print("Done!");
+        System.out.println("Done!");
     }
 }
