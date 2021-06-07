@@ -1,4 +1,4 @@
-package com.sim.geography;
+package com.sim;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,7 +11,7 @@ public class Region {
     public String name;
 
     public Region() {
-        
+
     }
 
     public Region(int continentId, int id, String name) {

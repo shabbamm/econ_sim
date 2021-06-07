@@ -1,4 +1,4 @@
-package com.sim.geography;
+package com.sim;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,10 +1,10 @@
-package com.sim.geography;
+package com.sim;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.HashMap;
+
 public class Galaxy {
-    @JsonProperty("dimensionId")
-    public int dimensionId;
     @JsonProperty("id")
     public int id;
     @JsonProperty("name")
@@ -14,8 +14,7 @@ public class Galaxy {
 
     }
 
-    public Galaxy(int dimensionId, int id, String name) {
-        this.dimensionId = dimensionId;
+    public Galaxy(int id, String name) {
         this.id = id;
         this.name = name;
     }

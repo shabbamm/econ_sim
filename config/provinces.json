@@ -1,8 +1,7 @@
-{
-  "0": {
-    "region_id": 0,
+[
+  {
+    "regionId": 0,
     "id": 0,
-    "name": "Seattle",
-    "resource_id": 0
+    "name": "Seattle"
   }
-}
+]

@@ -1,6 +1,57 @@
-{
-  "0": {
+[
+  {
+    "galaxyId": 0,
     "id": 0,
+    "name": "Sol"
+  },
+  {
+    "galaxyId": 0,
+    "id": 1,
+    "name": "Mercury"
+  },
+  {
+    "galaxyId": 0,
+    "id": 2,
+    "name": "Venus"
+  },
+  {
+    "galaxyId": 0,
+    "id": 3,
     "name": "Earth"
+  },
+  {
+    "galaxyId": 0,
+    "id": 4,
+    "name": "Luna"
+  },
+  {
+    "galaxyId": 0,
+    "id": 5,
+    "name": "Mars"
+  },
+  {
+    "galaxyId": 0,
+    "id": 6,
+    "name": "Jupiter"
+  },
+  {
+    "galaxyId": 0,
+    "id": 7,
+    "name": "Saturn"
+  },
+  {
+    "galaxyId": 0,
+    "id": 8,
+    "name": "Uranus"
+  },
+  {
+    "galaxyId": 0,
+    "id": 9,
+    "name": "Neptune"
+  },
+  {
+    "galaxyId": 0,
+    "id": 10,
+    "name": "Pluto"
   }
-}
+]

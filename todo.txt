@@ -1,0 +1,2 @@
+create class/data flow diagram
+    what can be abstracted and done internally within object and what needs global context

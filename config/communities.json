@@ -1,8 +1,8 @@
-{
-  "0": {
-    "province_id": 0,
+[
+  {
+    "provinceId": 0,
     "id": 0,
-    "size": 10,
-    "money": 30
+    "size": 100,
+    "money": 10000
   }
-}
+]
