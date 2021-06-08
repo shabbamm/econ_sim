@@ -3,8 +3,6 @@ package com.sim;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class World {
-    @JsonProperty("galaxyId")
-    public int galaxyId;
     @JsonProperty("id")
     public int id;
     @JsonProperty("name")
@@ -14,8 +12,7 @@ public class World {
 
     }
 
-    public World(int galaxyId, int id, String name) {
-        this.galaxyId = galaxyId;
+    public World(int id, String name) {
         this.id = id;
         this.name = name;
     }
