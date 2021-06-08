@@ -16,7 +16,10 @@ public class GameState {
         System.out.println("GameState initializing...");
 
         ObjectMapper objectMapper = new ObjectMapper();
-        this.worlds = objectMapper.readValue(loadConfig("config/worlds.json"), new TypeReference<List<World>>() {});
+        this.worlds = objectMapper.readValue(loadConfig("config/worlds.json"), new TypeReference<List<World>>() {
+        });
+
+        System.out.println(this.worlds);
 
         System.out.println("GameState initialized!");
     }
@@ -33,4 +36,6 @@ public class GameState {
         scanner.close();
         return data;
     }
+
+
 }
