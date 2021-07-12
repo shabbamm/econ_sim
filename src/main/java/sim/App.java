@@ -1,4 +1,4 @@
-package com.sim;
+package sim;
 
 import java.io.IOException;
 

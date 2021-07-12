@@ -1,46 +1,42 @@
 [
   {
-    "id": 0,
+    "worldId": 0,
     "name": "Sol"
   },
   {
-    "id": 1,
+    "worldId": 1,
     "name": "Mercury"
   },
   {
-    "id": 2,
+    "worldId": 2,
     "name": "Venus"
   },
   {
-    "id": 3,
+    "worldId": 3,
     "name": "Earth"
   },
   {
-    "id": 4,
-    "name": "Luna"
-  },
-  {
-    "id": 5,
+    "worldId": 4,
     "name": "Mars"
   },
   {
-    "id": 6,
+    "worldId": 5,
     "name": "Jupiter"
   },
   {
-    "id": 7,
+    "worldId": 6,
     "name": "Saturn"
   },
   {
-    "id": 8,
+    "worldId": 7,
     "name": "Uranus"
   },
   {
-    "id": 9,
+    "worldId": 8,
     "name": "Neptune"
   },
   {
-    "id": 10,
+    "worldId": 9,
     "name": "Pluto"
   }
 ]

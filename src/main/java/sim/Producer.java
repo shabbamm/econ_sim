@@ -1,4 +1,4 @@
-package com.sim;
+package sim;
 
 public class Producer {
 }

@@ -3,7 +3,11 @@
 /pops
 /Open-V2
 */temp
-/.idea
+.idea
+.vscode
+.classpath
+.project
+.settings
 
 target/
 pom.xml.tag

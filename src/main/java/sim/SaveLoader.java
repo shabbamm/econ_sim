@@ -1,0 +1,20 @@
+package sim;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class SaveLoader {
+    public static String loadConfig(String filename) throws FileNotFoundException {
+        File file = new File(filename);
+        Scanner scanner = new Scanner(file);
+        String data = new String();
+
+        while (scanner.hasNextLine()) {
+            data += scanner.nextLine();
+        }
+
+        scanner.close();
+        return data;
+    }
+}
