@@ -1,0 +1,4 @@
+create class/data flow diagram
+    what can be abstracted and done internally within object and what needs global context
+start with worlds and make them interact with eachother before you get super complicated with pop variables and provinces
+worlds should be the highest level of thing and the gamestate makes up the "universe"

@@ -1,6 +1,46 @@
-{
-    "0": {
-        "id": 0,
-        "name": "Earth"
-    }
-}
+[
+  {
+    "id": 0,
+    "name": "Sol"
+  },
+  {
+    "id": 1,
+    "name": "Mercury"
+  },
+  {
+    "id": 2,
+    "name": "Venus"
+  },
+  {
+    "id": 3,
+    "name": "Earth"
+  },
+  {
+    "id": 4,
+    "name": "Luna"
+  },
+  {
+    "id": 5,
+    "name": "Mars"
+  },
+  {
+    "id": 6,
+    "name": "Jupiter"
+  },
+  {
+    "id": 7,
+    "name": "Saturn"
+  },
+  {
+    "id": 8,
+    "name": "Uranus"
+  },
+  {
+    "id": 9,
+    "name": "Neptune"
+  },
+  {
+    "id": 10,
+    "name": "Pluto"
+  }
+]
