@@ -1,7 +1,7 @@
 [
   {
-    "provinceId": 0,
-    "id": 0,
+    "worldId": 3,
+    "popId": 0,
     "size": 100,
     "money": 10000
   }
