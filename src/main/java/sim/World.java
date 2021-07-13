@@ -11,8 +11,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class World {
 
-    // World's represent are largest level of abstraction outside the universe/GameState.
-    // They hold Pop's and Resource's and produce value reports for the GameState each turn
+    // World's represent are largest level of abstraction outside the
+    // universe/GameState.
+    // They hold Pop's and Resource's and produce value reports for the GameState
+    // each turn
 
     @JsonProperty("worldId")
     private long worldId;
@@ -27,15 +29,16 @@ public class World {
         ObjectMapper objectMapper = new ObjectMapper();
 
         // Currently successful in getting the json data to populate our World Objects
-        // TODO get worlds to be populated only by Pop's and Resource's that have same worldId
+        // # TODO get worlds to be populated only by Pop's and Resource's that have same
+        // worldId
         JsonNode node = objectMapper.readTree(path);
 
         System.out.println(node.findValue("worldId"));
 
-        if (this.worldId == node.get("worldId").asLong()) {
-            this.pops = objectMapper.readValue(path, new TypeReference<List<Pop>>() {
-            });
-        }
+        // if (this.worldId == node.get("worldId").asLong()) {
+        // this.pops = objectMapper.readValue(path, new TypeReference<List<Pop>>() {
+        // });
+        // }
 
     }
 
@@ -43,7 +46,7 @@ public class World {
         this.worldId = worldId;
         this.name = name;
         this.popLimit = popLimit;
-        this.pops = new ArrayList<Pop>();
+        // this.pops = new ArrayList<Pop>();
     }
 
     public long getWorldId() {
