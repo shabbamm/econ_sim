@@ -13,9 +13,11 @@ public class World {
 
     @JsonProperty("worldId")
     private long worldId;
+
     @JsonProperty("name")
     private String name;
 
+    @JsonProperty("popLimit")
     private long popLimit;
 
     public World() throws IOException {

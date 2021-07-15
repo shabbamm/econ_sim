@@ -17,25 +17,44 @@ public class GameState {
     // List<World> worlds[ World, World, World ]
     //
     // List<Pop> pops [ Pop, Pop, Pop ]
-    //
-    // # TODO additionally we want to ask if our collections: hold Objects [World,
-    // World, World] or hold id's [0, 1, 2] that correspond to objects
 
     public List<World> worlds;
+    public List<Pop> pops;
+    public List<Resource> resources;
 
     public GameState() throws IOException {
         System.out.println("GameState initializing...");
 
         // Using Jackson framework to serialize/deserialize json data as the save files
         ObjectMapper objectMapper = new ObjectMapper();
+
         this.worlds = objectMapper.readValue(SaveLoader.loadConfig("config/worlds.json"),
                 new TypeReference<ArrayList<World>>() {
                 });
 
+        this.pops = objectMapper.readValue(SaveLoader.loadConfig("config/pops.json"),
+                new TypeReference<ArrayList<Pop>>() {
+                });
+
+        this.resources = objectMapper.readValue(SaveLoader.loadConfig("config/resources.json"),
+                new TypeReference<ArrayList<Resource>>() {
+                });
+
         // For visualizing
         // # TODO create method meant for visualizing and move into there
-        for (World world : worlds) {
+
+        for (
+
+        World world : worlds) {
             System.out.println(world.toString());
+        }
+
+        for (Pop pop : pops) {
+            System.out.println(pop.toString());
+        }
+
+        for (Resource resource : resources) {
+            System.out.println(resource.toString());
         }
 
         System.out.println("GameState initialized!");

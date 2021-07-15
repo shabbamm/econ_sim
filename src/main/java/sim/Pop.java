@@ -12,10 +12,13 @@ public class Pop {
     // This associates the field w/ the json field for the ObjectMapper in GameState
     @JsonProperty("worldId")
     private long worldId;
+
     @JsonProperty("popId")
     private long popId;
+
     @JsonProperty("size")
     private long size;
+
     @JsonProperty("money")
     private long money;
 
