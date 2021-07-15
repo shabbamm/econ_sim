@@ -54,8 +54,8 @@ public class Pop {
     // # TODO find a better way of forming data as a string
     @Override
     public String toString() {
-        String result = "Pop:worldId[" + getWorldId() + "]popId[" + getPopId() + "]size[" + getSize() + "]" + "money["
-                + getMoney() + "]";
+        String result = "Pop:\n  worldId[" + getWorldId() + "]\n  popId[" + getPopId() + "]\n  size[" + getSize()
+                + "]\n  money[" + getMoney() + "]";
         return result;
     }
 }
