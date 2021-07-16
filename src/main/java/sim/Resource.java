@@ -11,9 +11,6 @@ public class Resource {
     @JsonProperty("resourceId")
     private long resourceId;
 
-    @JsonProperty("worldId")
-    private long worldId;
-
     @JsonProperty("productivity")
     private float productivity;
 
@@ -29,22 +26,11 @@ public class Resource {
         return resourceId;
     }
 
-    public long getWorldId() {
-        return worldId;
-    }
-
     public float getProductivity() {
         return productivity;
     }
 
     public void setProductivity(float productivity) {
         this.productivity = productivity;
-    }
-
-    @Override
-    public String toString() {
-        String result = "Resource:\n  name[" + getName() + "]\n  resourceId[" + getResourceId() + "]\n  worldId["
-                + getWorldId() + "]\n  productivity[" + getProductivity() + "]";
-        return result;
     }
 }

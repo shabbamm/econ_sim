@@ -1,0 +1,21 @@
+[
+  {
+    "worldId": 3,
+    "name": "Earth",
+    "pops": [
+      {
+        "popId": 0,
+        "job": "Farmer",
+        "size": 100,
+        "money": 0
+      }
+    ],
+    "resources": [
+      {
+        "name": "Wheat",
+        "resourceId": 0,
+        "productivity": 0.0
+      }
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 package sim;
 
 import java.io.IOException;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -19,6 +20,12 @@ public class World {
 
     @JsonProperty("popLimit")
     private long popLimit;
+
+    @JsonProperty("pops")
+    private List<Pop> pops;
+
+    @JsonProperty("resources")
+    private List<Resource> resources;
 
     public World() throws IOException {
 
@@ -40,12 +47,5 @@ public class World {
 
     public long getPopLimit() {
         return this.popLimit;
-    }
-
-    @Override
-    public String toString() {
-        String result = "World:\n  worldId[" + getWorldId() + "]\n  name[" + getName() + "]\n  popLimit["
-                + getPopLimit() + "]";
-        return result;
     }
 }

@@ -10,11 +10,12 @@ public class Pop {
     // # TODO create methods that tally value produced by Pop each 'turn'
 
     // This associates the field w/ the json field for the ObjectMapper in GameState
-    @JsonProperty("worldId")
-    private long worldId;
 
     @JsonProperty("popId")
     private long popId;
+
+    @JsonProperty("job")
+    private String job;
 
     @JsonProperty("size")
     private long size;
@@ -31,19 +32,19 @@ public class Pop {
     // This was created first w/ parameters I imagined being required each time a
     // World created a new Pop
     // # TODO if this is not required and can be removed, do so
-    public Pop(long worldId, long popId, long size, long money) {
-        this.worldId = worldId;
+    public Pop(long popId, String job, long size, long money) {
         this.popId = popId;
+        this.job = job;
         this.size = size;
         this.money = money;
     }
 
-    public long getWorldId() {
-        return this.worldId;
-    }
-
     public long getPopId() {
         return this.popId;
+    }
+
+    public String getJob() {
+        return job;
     }
 
     public long getSize() {
@@ -52,13 +53,5 @@ public class Pop {
 
     public long getMoney() {
         return this.money;
-    }
-
-    // # TODO find a better way of forming data as a string
-    @Override
-    public String toString() {
-        String result = "Pop:\n  worldId[" + getWorldId() + "]\n  popId[" + getPopId() + "]\n  size[" + getSize()
-                + "]\n  money[" + getMoney() + "]";
-        return result;
     }
 }
