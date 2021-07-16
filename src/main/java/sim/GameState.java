@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class GameState {
     //
     // List<Pop> pops [ Pop, Pop, Pop ]
 
-    public List<World> worlds;
+    private List<World> worlds;
 
     public GameState() throws IOException {
         System.out.println("GameState initializing...");
@@ -26,17 +27,25 @@ public class GameState {
         // Using Jackson framework to serialize/deserialize json data as the save files
         ObjectMapper objectMapper = new ObjectMapper();
 
-        this.worlds = objectMapper.readValue(SaveLoader.loadConfig("config/save_file.json"),
-                new TypeReference<ArrayList<World>>() {
-                });
-
-        // For visualizing
-        // # TODO create method meant for visualizing and move into there
-
-        for (World world : worlds) {
-            System.out.println(world.toString());
-        }
+        this.worlds = objectMapper.readValue(SaveHandler.loadConfig(), new TypeReference<ArrayList<World>>() {
+        });
 
         System.out.println("GameState initialized!");
+
+        createWorld("Mars", 0);
+
+        objectMapper.writeValue(Paths.get(SaveHandler.getFilePath()).toFile(), worlds);
+    }
+
+    public void createWorld(String name, long popLimit) throws IOException {
+        long worldId = this.worlds.size();
+
+        for (World world : worlds) {
+            if (world.getWorldId() == worldId) {
+                worldId++;
+            }
+        }
+
+        this.worlds.add(new World(worldId, name, popLimit));
     }
 }

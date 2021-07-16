@@ -1,6 +1,7 @@
 package sim;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -35,6 +36,8 @@ public class World {
         this.worldId = worldId;
         this.name = name;
         this.popLimit = popLimit;
+        this.pops = new ArrayList<>();
+        this.resources = new ArrayList<>();
     }
 
     public long getWorldId() {

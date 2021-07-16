@@ -2,6 +2,7 @@
   {
     "worldId": 3,
     "name": "Earth",
+    "popLimit": 0,
     "pops": [
       {
         "popId": 0,
@@ -17,5 +18,12 @@
         "productivity": 0.0
       }
     ]
+  },
+  {
+    "worldId": 1,
+    "name": "Mars",
+    "popLimit": 0,
+    "pops": [],
+    "resources": []
   }
 ]
